@@ -12,7 +12,7 @@ public abstract class Singleton<T> : Singleton where T : MonoBehaviour
     private static readonly object Lock = new object();
 
     [SerializeField]
-    private bool _persistent = true;
+    private bool _persistent = false;
     #endregion
 
     #region  Properties

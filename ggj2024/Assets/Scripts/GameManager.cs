@@ -33,6 +33,6 @@ public class GameManager : Singleton<GameManager>
     
     public void BeginGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }
