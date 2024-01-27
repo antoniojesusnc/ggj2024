@@ -9,6 +9,8 @@ namespace Player
         
         public int PlayerIndex;
         public IInputCapturing InputCapturing { get; set; }
+        
+        private PlayerModel _playerModel;
 
         private void Start()
         {
@@ -35,6 +37,12 @@ namespace Player
         private void UnsubscribeEvents()
         {
             //InputCapturing.AlternatedInputPressed -= ValidInputPressed;
+        }
+
+        public void SetPlayerModel(PlayerModel playerModel)
+        {
+            _playerModel = playerModel;
+            // Todo set image color, player number, etc.
         }
     }
 }

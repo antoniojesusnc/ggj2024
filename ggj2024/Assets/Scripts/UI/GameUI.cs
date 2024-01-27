@@ -18,16 +18,26 @@ public class GameUI : Singleton<GameUI>
         _uiEndLevel.gameObject.SetActive(false);
         _uiLevelTimer.gameObject.SetActive(false);
         
-        
         _bellySlap = BellySlap.Instance as BellySlap;
 
-        _bellySlap.OnLevelBegin += OnLevelBegin;
-        _bellySlap.OnLevelFinish += OnFinishGameplay;
-        
-        Begin();
+        SubscribeEvents();
+
+        //Begin();
     }
 
-    private void Begin()
+    private void SubscribeEvents()
+    {
+        _bellySlap.OnLevelBegin += OnLevelBegin;
+        _bellySlap.OnLevelFinish += OnFinishGameplay;
+    }
+
+    private void UnsubscribeEvents()
+    {
+        _bellySlap.OnLevelBegin -= OnLevelBegin;
+        _bellySlap.OnLevelFinish -= OnFinishGameplay;
+    }
+
+    public void Begin()
     {
         _uiBegin.Init();
         _uiBegin.Finished += FinishedCountDown;
