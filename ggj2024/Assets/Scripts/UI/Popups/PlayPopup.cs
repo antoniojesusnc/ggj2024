@@ -1,10 +1,22 @@
+using System;
+using Player;
 using UnityEngine;
 
-public class PlayPopup : MonoBehaviour
+namespace UI.Popups
 {
-    public void SetPlayerNumber(int playerNumber)
+    public class PlayPopup : MonoBehaviour
     {
-        GameManager.Instance.SetPlayerNumbers(playerNumber);
-        GameManager.Instance.BeginGame();
+        private JoinPlayer _joinPlayer;
+
+        private void Start()
+        {
+            _joinPlayer = GetComponent<JoinPlayer>();
+        }
+
+        public void SetPlayerNumber(int playerNumber)
+        {
+            GameManager.Instance.SetPlayerModels(_joinPlayer.GetJoinedPlayerModels());
+            GameManager.Instance.BeginGame();
+        }
     }
 }

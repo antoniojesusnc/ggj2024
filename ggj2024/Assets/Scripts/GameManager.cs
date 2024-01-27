@@ -1,11 +1,15 @@
 
+using System.Collections.Generic;
+using System.Linq;
+using Player;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    public int NumberOfPlayers { get; private set; }
-    
-   
+    public int NumberOfPlayers => _joinedPlayerModels.Count;
+
+    private List<PlayerModel> _joinedPlayerModels = new();
+
     void Start()
     {
         Init();
@@ -23,11 +27,6 @@ public class GameManager : Singleton<GameManager>
         
     }
 
-    public void SetPlayerNumbers(int numberOfPlayers)
-    {
-        NumberOfPlayers = numberOfPlayers;
-    }
-
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
@@ -41,5 +40,10 @@ public class GameManager : Singleton<GameManager>
     public void InitGamePlay()
     {
         
+    }
+
+    public void SetPlayerModels(IEnumerable<PlayerModel> playerModels)
+    {
+        _joinedPlayerModels = playerModels.ToList();
     }
 }

@@ -1290,7 +1290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812454179766950215, guid: 58f86fc25b92c444ebf6140393da4c5e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickInPlay
+      value: OnOpen
       objectReference: {fileID: 0}
     - target: {fileID: 2812454179766950215, guid: 58f86fc25b92c444ebf6140393da4c5e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

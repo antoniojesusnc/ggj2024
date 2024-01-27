@@ -5,7 +5,7 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        public int PlayerIndex; 
+        public int PlayerIndex;
         public IInputCapturing InputCapturing { get; set; }
 
         private void Start()

@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using Player;
-using Player.PlayerInput;
 using Player.PlayerInput;
 using Trials.Data;
 using UnityEngine.InputSystem;
@@ -8,40 +8,45 @@ namespace Trials
 {
     public class BellySlap : Trial<PlayerBellySlapData>
     {
-        private PlayerInputManager _playerInputManager; 
-        private PlayerInputs _inputs;
+        private PlayerInputManager _playerInputManager;
 
         private void Start()
         {
             _playerInputManager = GetComponent<PlayerInputManager>();
-            _inputs = new PlayerInputs();
-            _inputs.Enable();
-            _inputs.ClownP1.Join.performed += JoinPressed;
         }
 
-        private void JoinPressed(InputAction.CallbackContext obj)
+        /// <summary>
+        /// Joins a list of players to the game.
+        /// </summary>
+        /// <param name="playerModels"></param>
+        private void JoinPlayers(IEnumerable<PlayerModel> playerModels)
         {
-            int deviceId = obj.control.device.deviceId;
-            
-            if (!PlayerTrialDatas.ContainsKey(deviceId))
+            foreach (PlayerModel playerModel in playerModels)
             {
-                // Generate the player index depending on the amount of Character controllers
-                int playerIndex = PlayerTrialDatas.Count + 1;
-                // Join the player (instantiate its GameObject)
-                PlayerInput playerInput = _playerInputManager.JoinPlayer(playerIndex: playerIndex, pairWithDevice: obj.control.device);
-                // Instantiate the Input capturing for this trial
-                PlayerAlternatingInput playerAlternatingInput = new PlayerAlternatingInput(deviceId);
-                playerAlternatingInput.AlternatedInputPressed += ValidInputPressed;
-                // Get the character controller of the new player and initialise its values
-                PlayerController playerController = playerInput.GetComponent<PlayerController>();
-                playerController.PlayerIndex = playerIndex;
-                playerController.InputCapturing = playerAlternatingInput;
-                // Add to the dictionary of Character controllers
-                PlayerTrialDatas[deviceId] = new PlayerBellySlapData()
-                {
-                    PlayerController = playerController
-                };
+                JoinPlayer(playerModel);
             }
+        }
+
+        /// <summary>
+        /// Joins player to the game configuring it with a <see cref="PlayerInput"/>.
+        /// </summary>
+        /// <param name="playerModel">Configuration to use for the player.</param>
+        private void JoinPlayer(PlayerModel playerModel)
+        {
+            // Join the player (instantiate its GameObject)
+            PlayerInput playerInput = _playerInputManager.JoinPlayer(playerIndex: playerModel.PlayerIndex, pairWithDevice: playerModel.Device);
+            // Instantiate the Input capturing for this trial
+            PlayerAlternatingInput playerAlternatingInput = new PlayerAlternatingInput(playerModel.DeviceId);
+            playerAlternatingInput.AlternatedInputPressed += ValidInputPressed;
+            // Get the character controller of the new player and initialise its values
+            PlayerController playerController = playerInput.GetComponent<PlayerController>();
+            playerController.PlayerIndex = playerModel.PlayerIndex;
+            playerController.InputCapturing = playerAlternatingInput;
+            // Add to the dictionary of Character controllers
+            PlayerTrialDatas[playerModel.DeviceId] = new PlayerBellySlapData
+            {
+                PlayerController = playerController
+            };
         }
 
         private void ValidInputPressed(int deviceId, IInputCapturing.InputTypes inputType)

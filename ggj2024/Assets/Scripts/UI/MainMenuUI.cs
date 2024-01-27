@@ -5,12 +5,7 @@ public class MainMenuUI : Singleton<MainMenuUI>
     [SerializeField] public GameObject _playpopup;
     [SerializeField] public GameObject _creditPopup;
     
-    public void OnClickInPlay(int playerNumbers)
-    {
-        
-    }
-    
-    public void OnClickInPlay()
+    public void OnOpen()
     {
         _playpopup.gameObject.SetActive(true);
     }

@@ -1,16 +1,12 @@
-using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class PlayerModel : MonoBehaviour
+namespace Player
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerModel
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public int PlayerIndex;
+        public InputDevice Device;
+        public int DeviceId => Device.deviceId;
+        public int Colour;
     }
 }
