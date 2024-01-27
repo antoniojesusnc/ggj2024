@@ -101,8 +101,7 @@ namespace Trials
         {
             // Cannot find the Player data for the device --> Do nothing
             if (!PlayerTrialDatas.TryGetValue(deviceId, out PlayerBellySlapData playerTrialData)) return;
-            
-            ++playerTrialData.SlapCount;
+            playerTrialData.AddSlapCount(inputType);
             UnityEngine.Debug.Log($"Player {playerTrialData.PlayerIndex} pressed alternated {inputType} count: {playerTrialData.SlapCount}");
         }
     }

@@ -5,6 +5,8 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private PlayerGraphic _playerGraphic;
+        
         public int PlayerIndex;
         public IInputCapturing InputCapturing { get; set; }
 
@@ -12,6 +14,7 @@ namespace Player
         {
             SubscribeEvents();
             StartCapturingInputs();
+            _playerGraphic.Init(PlayerIndex);
         }
 
         private void OnDestroy()
