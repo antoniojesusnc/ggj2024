@@ -91,7 +91,8 @@ public class UIEndLevel : MonoBehaviour
         int maxValue = GetMaxValue();
         for (int i = 0; i < _players.Count; i++)
         {
-            var spawnMarker = GetSpawnMarker(_players[i], _players[i].SlapCount/(float)maxValue);
+            var spawnMarker = GetSpawnMarker(_players[i]);
+            spawnMarker.Init(_players[i], _players[i].SlapCount/(float)maxValue);
             _endLevelPlayerBars.Add(spawnMarker);
         }
     }
@@ -102,7 +103,7 @@ public class UIEndLevel : MonoBehaviour
         return _players[0].SlapCount;
     }
 
-    private UIEndLevelPlayerBar GetSpawnMarker(PlayerBellySlapData playerController, float slapFactor)
+    private UIEndLevelPlayerBar GetSpawnMarker(PlayerBellySlapData playerController)
     {
         return Instantiate(_uiEndLevelPlayerBarPrefab, 
                            playerController.PlayerController.transform.position + _config.BarOffset,

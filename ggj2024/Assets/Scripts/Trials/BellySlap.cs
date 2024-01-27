@@ -26,6 +26,8 @@ namespace Trials
         private void Start()
         {
             _playerInputManager = GetComponent<PlayerInputManager>();
+            
+            JoinPlayers(GameManager.Instance.)
         }
         
         public void InitLevel()
