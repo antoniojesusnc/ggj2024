@@ -1,12 +1,13 @@
+
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
     public int NumberOfPlayers { get; private set; }
     
+   
     void Start()
     {
-        //SceneManager.sceneLoaded
         Init();
     }
 
@@ -35,5 +36,10 @@ public class GameManager : Singleton<GameManager>
     public void BeginGame()
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
+    }
+    
+    public void InitGamePlay()
+    {
+        
     }
 }
