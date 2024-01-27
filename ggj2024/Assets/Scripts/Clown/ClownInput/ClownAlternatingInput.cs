@@ -11,15 +11,17 @@ namespace Clown.ClownInput
     
         private IInputCapturing.InputTypes _lastInputTypePressed = IInputCapturing.InputTypes.None;
 
+        public ClownAlternatingInput(int deviceId) : base(deviceId) { }
+
         protected override void OnInputPressed(IInputCapturing.InputTypes inputType)
         {
-            InputPressed.Invoke(inputType);
+            InputPressed?.Invoke(inputType);
 
             // The pressed input is different to the las one --> Trigger alternated
             if (_lastInputTypePressed != inputType)
             {
                 _lastInputTypePressed = inputType;
-                AlternatedInputPressed.Invoke(inputType);
+                AlternatedInputPressed?.Invoke(inputType);
             }
         }
     }

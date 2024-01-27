@@ -44,6 +44,15 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Join"",
+                    ""type"": ""Button"",
+                    ""id"": ""347e30ed-6059-42db-b9a7-22b2ce5aaeeb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -51,6 +60,17 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""549c2d0b-8b45-48d9-9487-90826551b598"",
                     ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AlternatingPrimary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c131e9ee-c2f5-4086-964a-63537abc5a27"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -68,6 +88,39 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
                     ""action"": ""AlternatingSecondary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2a12e145-04cc-4624-aa34-721c1585de93"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AlternatingSecondary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d3359d4c-6257-4d95-aaaa-80c7b077fc6b"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Join"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dab3554f-365c-4875-811b-cfe28643f8b7"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Join"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -78,6 +131,7 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
         m_ClownP1 = asset.FindActionMap("Clown P1", throwIfNotFound: true);
         m_ClownP1_AlternatingPrimary = m_ClownP1.FindAction("AlternatingPrimary", throwIfNotFound: true);
         m_ClownP1_AlternatingSecondary = m_ClownP1.FindAction("AlternatingSecondary", throwIfNotFound: true);
+        m_ClownP1_Join = m_ClownP1.FindAction("Join", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,12 +195,14 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
     private List<IClownP1Actions> m_ClownP1ActionsCallbackInterfaces = new List<IClownP1Actions>();
     private readonly InputAction m_ClownP1_AlternatingPrimary;
     private readonly InputAction m_ClownP1_AlternatingSecondary;
+    private readonly InputAction m_ClownP1_Join;
     public struct ClownP1Actions
     {
         private @ClownInputs m_Wrapper;
         public ClownP1Actions(@ClownInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @AlternatingPrimary => m_Wrapper.m_ClownP1_AlternatingPrimary;
         public InputAction @AlternatingSecondary => m_Wrapper.m_ClownP1_AlternatingSecondary;
+        public InputAction @Join => m_Wrapper.m_ClownP1_Join;
         public InputActionMap Get() { return m_Wrapper.m_ClownP1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -162,6 +218,9 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
             @AlternatingSecondary.started += instance.OnAlternatingSecondary;
             @AlternatingSecondary.performed += instance.OnAlternatingSecondary;
             @AlternatingSecondary.canceled += instance.OnAlternatingSecondary;
+            @Join.started += instance.OnJoin;
+            @Join.performed += instance.OnJoin;
+            @Join.canceled += instance.OnJoin;
         }
 
         private void UnregisterCallbacks(IClownP1Actions instance)
@@ -172,6 +231,9 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
             @AlternatingSecondary.started -= instance.OnAlternatingSecondary;
             @AlternatingSecondary.performed -= instance.OnAlternatingSecondary;
             @AlternatingSecondary.canceled -= instance.OnAlternatingSecondary;
+            @Join.started -= instance.OnJoin;
+            @Join.performed -= instance.OnJoin;
+            @Join.canceled -= instance.OnJoin;
         }
 
         public void RemoveCallbacks(IClownP1Actions instance)
@@ -193,5 +255,6 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
     {
         void OnAlternatingPrimary(InputAction.CallbackContext context);
         void OnAlternatingSecondary(InputAction.CallbackContext context);
+        void OnJoin(InputAction.CallbackContext context);
     }
 }
