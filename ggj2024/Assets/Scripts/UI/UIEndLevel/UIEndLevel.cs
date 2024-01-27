@@ -30,6 +30,7 @@ public class UIEndLevel : MonoBehaviour
 
     public void Init()
     {
+        AudioManager.Instance.PlaySound(AudioTypes.locucion_fingers_up);
         gameObject.SetActive(true);
         
         _players = BellySlap.Instance.PlayerTrialDatas.Values.ToList();
@@ -99,8 +100,15 @@ public class UIEndLevel : MonoBehaviour
 
     private int GetMaxValue()
     {
-        _players.Sort((p1, p2) => p1.SlapCount.CompareTo(p2.SlapCount));
-        return _players[0].SlapCount;
+        var max = _players[0].SlapCount;
+        for (int i = 0; i < _players.Count; i++)
+        {
+            if (_players[i].SlapCount > max)
+            {
+                max = _players[i].SlapCount;
+            }
+        }
+        return max;
     }
 
     private UIEndLevelPlayerBar GetSpawnMarker(PlayerBellySlapData playerController)

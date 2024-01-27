@@ -20,6 +20,17 @@ public class UIEndLevelPlayerBar : MonoBehaviour
 
     public void Animate(Action callback)
     {
-        _image.DOFillAmount(_factor, _config.FillSpeed).SetEase(_config.Ease).onComplete += () => callback?.Invoke();
+        var audioSource = AudioManager.Instance.PlaySound(AudioTypes.tintineo_ascendente);
+        audioSource.DOPitch(_factor * _config.MaxPitch, _config.FillSpeed);
+        _image.DOFillAmount(_factor, _config.FillSpeed).SetEase(_config.Ease).onComplete += () => OnFinishBarAnimate(callback);
+    }
+
+    private void OnFinishBarAnimate(Action callback)
+    {
+        if (_factor <= 1)
+        {
+            AudioManager.Instance.PlaySound(AudioTypes.explosión);
+        }
+        callback?.Invoke();
     }
 }

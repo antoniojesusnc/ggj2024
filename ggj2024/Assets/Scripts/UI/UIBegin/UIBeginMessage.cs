@@ -31,6 +31,8 @@ public class UIBeginMessage : MonoBehaviour
         _counter.transform.localScale = Vector3.zero;
         _counter.alpha = 1;
         
+        AudioManager.Instance.PlaySound(AudioTypes.sonido_de_comienzo);
+        
         _counterText.text = text;
         var sequence = DOTween.Sequence();
         sequence.Append(_counter.transform.DOScale(_config.NumberScale, _config.NumberTime));
@@ -53,11 +55,20 @@ public class UIBeginMessage : MonoBehaviour
         {
             text = _config.FinalText;
         }
+
+        if (_countDown == 3)
+        {
+            AudioManager.Instance.PlaySound(AudioTypes.three_two_one_laught_para_el_juego);
+        }
+        
         DOVirtual.DelayedCall(_config.TimeBetweenNumbers, () => DoNumberAnimation(text));
     }
 
     private void OnFinished()
     {
+        AudioManager.Instance.PlaySound(AudioTypes.musica_go);
+        AudioManager.Instance.PlaySound(AudioTypes.musica_in_game);
+
         Finished?.Invoke();
     }
 }

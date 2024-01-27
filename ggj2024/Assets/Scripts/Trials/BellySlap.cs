@@ -29,6 +29,7 @@ namespace Trials
             _isPlaying = true;
             RemainingTime = _levelConfig.LevelDuration;
             OnLevelBegin?.Invoke();
+            
         }
         
         public void Update()

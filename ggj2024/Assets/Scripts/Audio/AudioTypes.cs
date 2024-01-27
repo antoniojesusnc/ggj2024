@@ -20,7 +20,7 @@ public enum AudioTypes
     popup_abriendose_shui,
     popup_cerrandose_shiu,
     musica_main_menu_divertida_y_tranquila,
-    musica_in_game_ready,
+    musica_in_game,
     musica_go,
 
     Size

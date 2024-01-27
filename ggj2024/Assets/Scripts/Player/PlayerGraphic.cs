@@ -36,11 +36,13 @@ namespace Player
             SetAnimator(inputType == IInputCapturing.InputTypes.Primary
                             ? PlayerAnimation.der
                             : PlayerAnimation.izq);
+            AudioManager.Instance.PlaySound(AudioTypes.palmada_1);
         }
 
         private void SetInitialAnimation()
         {
             SetAnimator(PlayerAnimation.strip);
+            AudioManager.Instance.PlaySound(AudioTypes.ropa_rasgandose);
         }
 
         public void SetAnimator(PlayerAnimation animation)

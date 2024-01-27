@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AudioManager : Singleton<AudioManager>
 {
@@ -11,23 +13,23 @@ public class AudioManager : Singleton<AudioManager>
 
     private List<AudioManagerInfo> _audioSourcesInfo = new();
 
-    public void PlaySound(AudioTypes audioType)
+    public AudioSource PlaySound(AudioTypes audioType)
     {
-        PlaySound(audioType, transform);
+        return PlaySound(audioType, transform);
     }
 
-    public void PlaySound(AudioTypes audioType, Transform parent)
+    public AudioSource PlaySound(AudioTypes audioType, Transform parent)
     {
         if (!_audioConfig.TryGetSoundConfig(audioType, out var soundConfigInfo))
         {
-            Debug.LogWarning("Audio not set");
-            return;
+            Debug.LogWarning($"[AudioManager] Audio not set for {audioType}");
+            return null;
         }
 
-        PlaySoundInternal(soundConfigInfo, parent);
+        return PlaySoundInternal(soundConfigInfo, parent);
     }
 
-    private void PlaySoundInternal(SoundConfigInfo soundConfigInfo, Transform parent)
+    private AudioSource PlaySoundInternal(SoundConfigInfo soundConfigInfo, Transform parent)
     {
         AudioSource audioSource;
         if (parent == transform)
@@ -46,8 +48,11 @@ public class AudioManager : Singleton<AudioManager>
         transform.position = transform.position + transform.forward;
         audioSource.clip = soundConfigInfo.AudioClip;
         audioSource.volume = soundConfigInfo.Volume;
+        audioSource.pitch = soundConfigInfo.PitchVariance == 0
+            ? 1f
+            : Random.Range(1 - soundConfigInfo.PitchVariance, 1 + soundConfigInfo.PitchVariance);
         audioSource.Play();
-        
+        return audioSource;
     }
 
     private bool IsAlreadySound(SoundConfigInfo soundConfigInfo)
@@ -100,7 +105,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         
     }
-
+    
     private AudioSource GetAudioSource()
     {
         var audioSources = GetComponents<AudioSource>();
