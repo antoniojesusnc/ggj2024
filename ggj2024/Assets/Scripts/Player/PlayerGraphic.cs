@@ -12,8 +12,8 @@ namespace Player
         public enum PlayerAnimation
         {
             lento,
-            izquierda,
-            derecha,
+            izq,
+            der,
             strip,
             idle
         }
@@ -33,8 +33,8 @@ namespace Player
         private void OnNewSlapCount(IInputCapturing.InputTypes inputType)
         {
             SetAnimator(inputType == IInputCapturing.InputTypes.Primary
-                            ? PlayerAnimation.derecha
-                            : PlayerAnimation.izquierda);
+                            ? PlayerAnimation.der
+                            : PlayerAnimation.izq);
         }
 
         private void SetInitialAnimation()

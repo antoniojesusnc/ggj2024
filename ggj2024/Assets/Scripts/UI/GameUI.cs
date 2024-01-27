@@ -7,7 +7,6 @@ public class GameUI : MonoBehaviour
     [SerializeField] private UIEndLevel _uiEndLevel;
     [SerializeField] private UILevelTimer _uiLevelTimer;
 
-
     private BellySlap _bellySlap;
     public void Start()
     {

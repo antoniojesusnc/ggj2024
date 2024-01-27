@@ -1,10 +1,16 @@
+using System;
 using UnityEngine;
 
 public class MainMenuUI : Singleton<MainMenuUI>
 {
     [SerializeField] public GameObject _playpopup;
     [SerializeField] public GameObject _exitButton;
-    
+
+
+    void Start()
+    {
+        AudioManager.Instance.PlaySound(AudioTypes.musica_main_menu_divertida_y_tranquila);
+    }
     public void OnOpen()
     {
         _playpopup.gameObject.SetActive(true);
@@ -16,5 +22,10 @@ public class MainMenuUI : Singleton<MainMenuUI>
     public void OnClickInExit()
     {
         GeneralUI.Instance.ShowAreYouSureToClose();
+    }
+
+    private void OnDisable()
+    {
+        AudioManager.Instance.DestroyAudioSourceAfter(AudioTypes.musica_main_menu_divertida_y_tranquila, 0.5f);
     }
 }
