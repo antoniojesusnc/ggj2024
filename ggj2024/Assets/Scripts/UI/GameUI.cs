@@ -1,15 +1,12 @@
-using System;
 using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
-    
-    
-    private void Awake()
-    {
-       
-        
-    }
+    [SerializeField] private UIBeginMessage _uiBegin;
 
+    public void Init()
+    {
+        _uiBegin.Begin();
+    }
     
 }

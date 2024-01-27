@@ -16,17 +16,12 @@ public class UIBeginMessage : MonoBehaviour
 
     private int _countDown;
 
-    public void OnEnable()
+    public void Begin()
     {
+        gameObject.SetActive(true);
         _counter.gameObject.SetActive(false);
         _countDown = _config.CountDown;
         
-        Begin();
-    }
-    
-
-    private void Begin()
-    {
         DoNumberAnimation(_config.InitialText);
     }
 

@@ -6,6 +6,7 @@ public class GameManager : Singleton<GameManager>
     
     void Start()
     {
+        //SceneManager.sceneLoaded
         Init();
     }
 
