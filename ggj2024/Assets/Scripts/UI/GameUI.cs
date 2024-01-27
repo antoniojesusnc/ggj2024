@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameUI : MonoBehaviour
 {
     [SerializeField] private UIBeginMessage _uiBegin;
+    [SerializeField] private UIEndLevel _uiEndLevel;
 
     public void Start()
     {
@@ -18,5 +19,12 @@ public class GameUI : MonoBehaviour
     private void FinishedCountDown()
     {
         GameManager.Instance.InitGamePlay();
+    }
+
+    private void OnFinishGameplay()
+    {
+        _uiEndLevel.Init();
+        //_uiEndLevel.Finished += 
+        
     }
 }

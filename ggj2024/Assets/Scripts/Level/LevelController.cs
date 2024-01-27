@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelController : Singleton<LevelController>
@@ -7,7 +8,8 @@ public class LevelController : Singleton<LevelController>
     private LevelConfig _levelConfig;
     
     public float RemainingTime { get; private set; }
-    
+    public List<CharacterController> AllCharacterController { get; set; }
+
 
     public event Action OnLevelBegin;
     public event Action<float> OnUpdateTime; 
