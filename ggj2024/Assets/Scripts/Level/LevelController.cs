@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
 public class LevelController : Singleton<LevelController>
@@ -8,15 +9,20 @@ public class LevelController : Singleton<LevelController>
     private LevelConfig _levelConfig;
     
     public float RemainingTime { get; private set; }
-    public List<CharacterController> AllCharacterController { get; set; }
+    public List<PlayerController> AllPlayerController { get; set; }
 
 
     public event Action OnLevelBegin;
     public event Action<float> OnUpdateTime; 
     public event Action OnLevelFinish;
     
-    private bool _isPlaying; 
-    
+    private bool _isPlaying;
+
+    private void Start()
+    {
+        
+    }
+
     public void InitLevel()
     {
         RemainingTime = _levelConfig.LevelDuration;

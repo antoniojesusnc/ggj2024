@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using Trials.Data;
-using UnityEngine;
 
 namespace Trials
 {
-    public class Trial<TTrialDataType> : MonoBehaviour where TTrialDataType : PlayerTrialData
+    public class Trial<TTrialDataType> : Singleton<Trial<TTrialDataType>> where TTrialDataType : PlayerTrialData
     {
-        protected readonly Dictionary<int, TTrialDataType> PlayerTrialDatas = new();
+        public readonly Dictionary<int, TTrialDataType> PlayerTrialDatas = new();
     }
 }

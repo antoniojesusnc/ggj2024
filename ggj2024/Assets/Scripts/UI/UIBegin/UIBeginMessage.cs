@@ -16,7 +16,7 @@ public class UIBeginMessage : MonoBehaviour
 
     private int _countDown;
 
-    public void Begin()
+    public void Init()
     {
         gameObject.SetActive(true);
         _counter.gameObject.SetActive(false);

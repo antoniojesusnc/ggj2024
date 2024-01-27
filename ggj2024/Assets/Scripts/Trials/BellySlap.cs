@@ -1,18 +1,64 @@
+using System;
 using System.Collections.Generic;
 using Player;
 using Player.PlayerInput;
 using Trials.Data;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Trials
 {
     public class BellySlap : Trial<PlayerBellySlapData>
     {
+        [SerializeField] 
+        private LevelConfig _levelConfig;
+        
+        public float RemainingTime { get; private set; }
+        
         private PlayerInputManager _playerInputManager;
+        private bool _isPlaying;
 
+
+        public event Action OnLevelBegin;
+        public event Action<float> OnUpdateTime; 
+        public event Action OnLevelFinish;
+        
         private void Start()
         {
             _playerInputManager = GetComponent<PlayerInputManager>();
+        }
+        
+        public void InitLevel()
+        {
+            _isPlaying = true;
+            RemainingTime = _levelConfig.LevelDuration;
+            OnLevelBegin?.Invoke();
+        }
+        
+        public void Update()
+        {
+            if (!_isPlaying)
+            {
+                return;
+            }
+
+            UpdateRemainingTime();
+        }
+        
+        private void UpdateRemainingTime()
+        {
+            RemainingTime -= Time.deltaTime;
+            OnUpdateTime?.Invoke(RemainingTime);
+
+            if (RemainingTime <= 0)
+            {
+                LevelFinish();
+            }
+        }
+        
+        private void LevelFinish()
+        {
+            OnLevelFinish?.Invoke();
         }
 
         /// <summary>

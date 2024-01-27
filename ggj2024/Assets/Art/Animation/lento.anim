@@ -22,21 +22,21 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -1847239546, guid: 62aae1440fb650741a71388993ea7127, type: 3}
-    - time: 0.016666668
+    - time: 0.125
       value: {fileID: 1380879519, guid: 62aae1440fb650741a71388993ea7127, type: 3}
-    - time: 0.033333335
+    - time: 0.25
       value: {fileID: 417872757, guid: 62aae1440fb650741a71388993ea7127, type: 3}
-    - time: 0.05
+    - time: 0.375
       value: {fileID: -1500108311, guid: 62aae1440fb650741a71388993ea7127, type: 3}
-    - time: 0.06666667
+    - time: 0.5
       value: {fileID: 1482150186, guid: 62aae1440fb650741a71388993ea7127, type: 3}
-    - time: 0.083333336
+    - time: 0.625
       value: {fileID: 1786992007, guid: 62aae1440fb650741a71388993ea7127, type: 3}
-    - time: 0.1
+    - time: 0.75
       value: {fileID: 146495979, guid: 62aae1440fb650741a71388993ea7127, type: 3}
-    - time: 0.11666667
+    - time: 0.875
       value: {fileID: -1774692642, guid: 62aae1440fb650741a71388993ea7127, type: 3}
-    - time: 0.13333334
+    - time: 1
       value: {fileID: -1760474714, guid: 62aae1440fb650741a71388993ea7127, type: 3}
     attribute: m_Sprite
     path: ClownCloths
@@ -47,28 +47,28 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -1233969989, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
-    - time: 0.016666668
+    - time: 0.125
       value: {fileID: -599226132, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
-    - time: 0.033333335
+    - time: 0.25
       value: {fileID: 173437646, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
-    - time: 0.05
+    - time: 0.375
       value: {fileID: -343866158, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
-    - time: 0.06666667
+    - time: 0.5
       value: {fileID: -720881287, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
-    - time: 0.083333336
+    - time: 0.625
       value: {fileID: -252023277, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
-    - time: 0.1
+    - time: 0.75
       value: {fileID: 1513985404, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
-    - time: 0.11666667
+    - time: 0.875
       value: {fileID: -1186592222, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
-    - time: 0.13333334
+    - time: 1
       value: {fileID: -584153114, guid: c33c1bf00c4904f4ba696d0694b7ecf5, type: 3}
     attribute: m_Sprite
     path: ClownImage
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
-  m_SampleRate: 60
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -117,7 +117,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.15
+    m_StopTime: 1.125
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
