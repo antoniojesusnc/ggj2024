@@ -1,3 +1,4 @@
+using System.Linq;
 using Player.PlayerInput;
 using Trials;
 using Trials.Data;
@@ -26,7 +27,7 @@ namespace Player
             SetInitialAnimation();
 
             _bellySlap = BellySlap.Instance as BellySlap;
-             _playerDataInput = _bellySlap.PlayerTrialDatas[playerIndex];
+             _playerDataInput = _bellySlap.PlayerTrialDatas.Values.First(trialData => trialData.PlayerIndex == playerIndex);
              _playerDataInput.NewSlapCount += OnNewSlapCount;
         }
 
