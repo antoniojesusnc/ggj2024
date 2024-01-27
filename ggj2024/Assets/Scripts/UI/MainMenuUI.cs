@@ -10,13 +10,14 @@ public class MainMenuUI : Singleton<MainMenuUI>
     void Start()
     {
         AudioManager.Instance.PlaySound(AudioTypes.musica_main_menu_divertida_y_tranquila);
-    }
-    public void OnOpen()
-    {
-        _playpopup.gameObject.SetActive(true);
-
+        
         _exitButton.gameObject.SetActive(Application.platform == RuntimePlatform.WindowsEditor ||
                                          Application.platform != RuntimePlatform.WebGLPlayer);
+    }
+    
+    public void BeginGame()
+    {
+        GameManager.Instance.BeginGame();
     }
     
     public void OnClickInExit()
