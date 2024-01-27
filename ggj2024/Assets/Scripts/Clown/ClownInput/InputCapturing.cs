@@ -1,11 +1,15 @@
+using System;
 using UnityEngine.InputSystem;
 
 namespace Clown.ClownInput
 {
     public abstract class InputCapturing : IInputCapturing
     {
+        // Events
+        public Action<int, IInputCapturing.InputTypes> InputPressed;
+        
         private readonly ClownInputs _inputs = new();
-        private readonly int _deviceId;
+        protected readonly int _deviceId;
 
         public InputCapturing(int deviceId)
         {
@@ -37,6 +41,10 @@ namespace Clown.ClownInput
                 OnInputPressed(IInputCapturing.InputTypes.Secondary);
         }
 
-        protected abstract void OnInputPressed(IInputCapturing.InputTypes inputType);
+
+        protected virtual void OnInputPressed(IInputCapturing.InputTypes inputType)
+        {
+            InputPressed?.Invoke(_deviceId, inputType);
+        }
     }
 }

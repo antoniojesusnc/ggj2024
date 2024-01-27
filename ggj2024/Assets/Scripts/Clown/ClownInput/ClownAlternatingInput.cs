@@ -6,8 +6,8 @@ namespace Clown.ClownInput
     public class ClownAlternatingInput : InputCapturing
     {
         // Events
-        public Action<IInputCapturing.InputTypes> InputPressed;
-        public Action<IInputCapturing.InputTypes> AlternatedInputPressed;
+        public Action<int, IInputCapturing.InputTypes> InvalidInputPressed;
+        public Action<int, IInputCapturing.InputTypes> AlternatedInputPressed;
     
         private IInputCapturing.InputTypes _lastInputTypePressed = IInputCapturing.InputTypes.None;
 
@@ -15,13 +15,18 @@ namespace Clown.ClownInput
 
         protected override void OnInputPressed(IInputCapturing.InputTypes inputType)
         {
-            InputPressed?.Invoke(inputType);
-
+            base.OnInputPressed(inputType);
+            
+            // The pressed input is the same as the las one --> Trigger invalid
+            if (_lastInputTypePressed == inputType)
+            {
+                InvalidInputPressed?.Invoke(_deviceId, inputType);
+            }
             // The pressed input is different to the las one --> Trigger alternated
-            if (_lastInputTypePressed != inputType)
+            else
             {
                 _lastInputTypePressed = inputType;
-                AlternatedInputPressed?.Invoke(inputType);
+                AlternatedInputPressed?.Invoke(_deviceId, inputType);
             }
         }
     }

@@ -1,16 +1,13 @@
-using System.Collections.Generic;
 using Clown.ClownInput;
 using UnityEngine.InputSystem;
 using CharacterController = Clown.CharacterController;
 
 namespace Trials
 {
-    public class BellySlap : Trial
+    public class BellySlap : Trial<PlayerBellySlapData>
     {
         private PlayerInputManager _playerInputManager; 
         private ClownInputs _inputs;
-        
-        Dictionary<int, CharacterController> _characterControllers = new();
 
         private void Start()
         {
@@ -24,10 +21,10 @@ namespace Trials
         {
             int deviceId = obj.control.device.deviceId;
             
-            if (!_characterControllers.ContainsKey(deviceId))
+            if (!PlayerTrialDatas.ContainsKey(deviceId))
             {
                 // Generate the player index depending on the amount of Character controllers
-                int playerIndex = _characterControllers.Count;
+                int playerIndex = PlayerTrialDatas.Count + 1;
                 // Join the player (instantiate its GameObject)
                 PlayerInput playerInput = _playerInputManager.JoinPlayer(playerIndex: playerIndex, pairWithDevice: obj.control.device);
                 // Instantiate the Input capturing for this trial
@@ -38,13 +35,20 @@ namespace Trials
                 characterController.PlayerIndex = playerIndex;
                 characterController.InputCapturing = clownAlternatingInput;
                 // Add to the dictionary of Character controllers
-                _characterControllers[deviceId] = characterController;
+                PlayerTrialDatas[deviceId] = new PlayerBellySlapData()
+                {
+                    CharacterController = characterController
+                };
             }
         }
 
-        private void ValidInputPressed(IInputCapturing.InputTypes inputType)
+        private void ValidInputPressed(int deviceId, IInputCapturing.InputTypes inputType)
         {
-            UnityEngine.Debug.Log($"Alternate input: {inputType}");
+            // Cannot find the Player data for the device --> Do nothing
+            if (!PlayerTrialDatas.TryGetValue(deviceId, out PlayerBellySlapData playerTrialData)) return;
+            
+            ++playerTrialData.SlapCount;
+            UnityEngine.Debug.Log($"Player {playerTrialData.PlayerIndex} pressed alternated {inputType} count: {playerTrialData.SlapCount}");
         }
     }
 }
