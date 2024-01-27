@@ -10,7 +10,11 @@ public class UIBeginMessage : MonoBehaviour
     [SerializeField]
     private CanvasGroup _counter;
     [SerializeField]
+    private CanvasGroup _counterOutline;
+    [SerializeField]
     private TextMeshProUGUI _counterText;
+    [SerializeField]
+    private TextMeshProUGUI _counterTextOutline;
 
     public event Action Finished;
 
@@ -20,6 +24,7 @@ public class UIBeginMessage : MonoBehaviour
     {
         gameObject.SetActive(true);
         _counter.gameObject.SetActive(false);
+        _counterOutline.gameObject.SetActive(false);
         _countDown = _config.CountDown;
         
         DoNumberAnimation(_config.InitialText);
@@ -30,14 +35,21 @@ public class UIBeginMessage : MonoBehaviour
         _counter.gameObject.SetActive(true);
         _counter.transform.localScale = Vector3.zero;
         _counter.alpha = 1;
+        _counterOutline.gameObject.SetActive(true);
+        _counterOutline.transform.localScale = Vector3.zero;
+        _counterOutline.alpha = 1;
         
         AudioManager.Instance.PlaySound(AudioTypes.sonido_de_comienzo);
         
         _counterText.text = text;
+        _counterTextOutline.text = text;
         var sequence = DOTween.Sequence();
         sequence.Append(_counter.transform.DOScale(_config.NumberScale, _config.NumberTime));
+        sequence.Insert(0, _counterOutline.transform.DOScale(_config.NumberScale, _config.NumberTime));
         sequence.Insert(_config.TimeToBeginFadeOut,
                         _counter.DOFade(0, _config.NumberTime - _config.TimeToBeginFadeOut));
+        sequence.Insert(_config.TimeToBeginFadeOut,
+                        _counterOutline.DOFade(0, _config.NumberTime - _config.TimeToBeginFadeOut));
         sequence.onComplete += OnEndNumber;
     }
 
