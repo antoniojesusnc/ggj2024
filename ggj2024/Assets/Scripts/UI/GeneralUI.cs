@@ -32,7 +32,7 @@ public class GeneralUI : Singleton<GeneralUI>
         }
     }
 
-    private void ShowAreYouSureToClose()
+    public void ShowAreYouSureToClose()
     {
         _areYouSurePopup.gameObject.SetActive(true);
     }

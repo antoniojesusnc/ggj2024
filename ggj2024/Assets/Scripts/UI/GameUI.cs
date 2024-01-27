@@ -33,6 +33,7 @@ public class GameUI : MonoBehaviour
     private void OnLevelBegin()
     {
         _uiBegin.gameObject.SetActive(false);
+        _uiLevelTimer.gameObject.SetActive(true);
         _uiLevelTimer.Init();
     }
 

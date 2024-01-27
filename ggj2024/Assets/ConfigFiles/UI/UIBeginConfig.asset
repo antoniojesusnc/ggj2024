@@ -19,4 +19,4 @@ MonoBehaviour:
   <NumberTime>k__BackingField: 1
   <NumberEase>k__BackingField: 6
   <TimeToBeginFadeOut>k__BackingField: 0.75
-  <TimeBetweenNumbers>k__BackingField: 0.75
+  <TimeBetweenNumbers>k__BackingField: 0.5
