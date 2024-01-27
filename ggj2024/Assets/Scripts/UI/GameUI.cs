@@ -1,11 +1,15 @@
 using Trials;
 using UnityEngine;
 
-public class GameUI : MonoBehaviour
+public class GameUI : Singleton<GameUI>
 {
     [SerializeField] private UIBeginMessage _uiBegin;
     [SerializeField] private UIEndLevel _uiEndLevel;
     [SerializeField] private UILevelTimer _uiLevelTimer;
+
+    [field:SerializeField]
+    public Transform PlayerContainer { get; private set; }
+
 
     private BellySlap _bellySlap;
     public void Start()

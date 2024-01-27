@@ -16,19 +16,13 @@ namespace Trials
         public float RemainingTime { get; private set; }
         
         private PlayerInputManager _playerInputManager;
+        private PlayerInputManager PlayerInputManager => _playerInputManager ??= GetComponent<PlayerInputManager>();
         private bool _isPlaying;
 
 
         public event Action OnLevelBegin;
         public event Action<float> OnUpdateTime; 
         public event Action OnLevelFinish;
-        
-        private void Start()
-        {
-            _playerInputManager = GetComponent<PlayerInputManager>();
-            
-            //JoinPlayers(GameManager.Instance.)
-        }
         
         public void InitLevel()
         {
@@ -67,7 +61,7 @@ namespace Trials
         /// Joins a list of players to the game.
         /// </summary>
         /// <param name="playerModels"></param>
-        private void JoinPlayers(IEnumerable<PlayerModel> playerModels)
+        public void JoinPlayers(IEnumerable<PlayerModel> playerModels)
         {
             foreach (PlayerModel playerModel in playerModels)
             {
@@ -82,7 +76,9 @@ namespace Trials
         private void JoinPlayer(PlayerModel playerModel)
         {
             // Join the player (instantiate its GameObject)
-            PlayerInput playerInput = _playerInputManager.JoinPlayer(playerIndex: playerModel.PlayerIndex, pairWithDevice: playerModel.Device);
+            PlayerInput playerInput = PlayerInputManager.JoinPlayer(playerIndex: playerModel.PlayerIndex, pairWithDevice: playerModel.Device);
+            playerInput.gameObject.transform.SetParent(GameUI.Instance.PlayerContainer);
+            // TODO: Place properly in the scene
             // Instantiate the Input capturing for this trial
             PlayerAlternatingInput playerAlternatingInput = new PlayerAlternatingInput(playerModel.DeviceId);
             playerAlternatingInput.AlternatedInputPressed += ValidInputPressed;
