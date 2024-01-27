@@ -1,0 +1,54 @@
+{
+    "name": "ClownInputs",
+    "maps": [
+        {
+            "name": "Clown P1",
+            "id": "49a99eab-9e44-46d0-8df4-8c078eea4169",
+            "actions": [
+                {
+                    "name": "AlternatingPrimary",
+                    "type": "Button",
+                    "id": "38dafffd-3f36-4a51-9940-b6b46424ec40",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AlternatingSecondary",
+                    "type": "Button",
+                    "id": "3b6c28d3-d764-47ef-b871-993b80b04bc0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "549c2d0b-8b45-48d9-9487-90826551b598",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlternatingPrimary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83b9a77a-1c24-42ff-bc27-d7fcc9c2e854",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlternatingSecondary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
