@@ -70,7 +70,7 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c131e9ee-c2f5-4086-964a-63537abc5a27"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -92,7 +92,7 @@ public partial class @ClownInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2a12e145-04cc-4624-aa34-721c1585de93"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
