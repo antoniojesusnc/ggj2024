@@ -1,4 +1,4 @@
-﻿namespace Clown.ClownInput
+﻿namespace Player.PlayerInput
 {
     public interface IInputCapturing
     {

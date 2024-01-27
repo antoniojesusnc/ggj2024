@@ -1,18 +1,20 @@
-using Clown.ClownInput;
+using Player;
+using Player.PlayerInput;
+using Player.PlayerInput;
+using Trials.Data;
 using UnityEngine.InputSystem;
-using CharacterController = Clown.CharacterController;
 
 namespace Trials
 {
     public class BellySlap : Trial<PlayerBellySlapData>
     {
         private PlayerInputManager _playerInputManager; 
-        private ClownInputs _inputs;
+        private PlayerInputs _inputs;
 
         private void Start()
         {
             _playerInputManager = GetComponent<PlayerInputManager>();
-            _inputs = new ClownInputs();
+            _inputs = new PlayerInputs();
             _inputs.Enable();
             _inputs.ClownP1.Join.performed += JoinPressed;
         }
@@ -28,16 +30,16 @@ namespace Trials
                 // Join the player (instantiate its GameObject)
                 PlayerInput playerInput = _playerInputManager.JoinPlayer(playerIndex: playerIndex, pairWithDevice: obj.control.device);
                 // Instantiate the Input capturing for this trial
-                ClownAlternatingInput clownAlternatingInput = new ClownAlternatingInput(deviceId);
-                clownAlternatingInput.AlternatedInputPressed += ValidInputPressed;
+                PlayerAlternatingInput playerAlternatingInput = new PlayerAlternatingInput(deviceId);
+                playerAlternatingInput.AlternatedInputPressed += ValidInputPressed;
                 // Get the character controller of the new player and initialise its values
-                CharacterController characterController = playerInput.GetComponent<CharacterController>();
-                characterController.PlayerIndex = playerIndex;
-                characterController.InputCapturing = clownAlternatingInput;
+                PlayerController playerController = playerInput.GetComponent<PlayerController>();
+                playerController.PlayerIndex = playerIndex;
+                playerController.InputCapturing = playerAlternatingInput;
                 // Add to the dictionary of Character controllers
                 PlayerTrialDatas[deviceId] = new PlayerBellySlapData()
                 {
-                    CharacterController = characterController
+                    PlayerController = playerController
                 };
             }
         }

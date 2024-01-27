@@ -1,6 +1,7 @@
-using UnityEngine;
-
-public class PlayerBellySlapData : PlayerTrialData
+namespace Trials.Data
 {
-    public int SlapCount;
+    public class PlayerBellySlapData : PlayerTrialData
+    {
+        public int SlapCount;
+    }
 }

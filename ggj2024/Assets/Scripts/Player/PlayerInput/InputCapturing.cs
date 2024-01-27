@@ -1,14 +1,14 @@
 using System;
 using UnityEngine.InputSystem;
 
-namespace Clown.ClownInput
+namespace Player.PlayerInput
 {
     public abstract class InputCapturing : IInputCapturing
     {
         // Events
-        public Action<int, IInputCapturing.InputTypes> InputPressed;
+        public event Action<int, IInputCapturing.InputTypes> InputPressed;
         
-        private readonly ClownInputs _inputs = new();
+        private readonly PlayerInputs _inputs = new();
         protected readonly int _deviceId;
 
         public InputCapturing(int deviceId)

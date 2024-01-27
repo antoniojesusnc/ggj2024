@@ -1,17 +1,17 @@
 using System;
-using UnityEngine.Events;
+using Player.PlayerInput;
 
-namespace Clown.ClownInput
+namespace Player.PlayerInput
 {
-    public class ClownAlternatingInput : InputCapturing
+    public class PlayerAlternatingInput : InputCapturing
     {
         // Events
-        public Action<int, IInputCapturing.InputTypes> InvalidInputPressed;
-        public Action<int, IInputCapturing.InputTypes> AlternatedInputPressed;
+        public event Action<int, IInputCapturing.InputTypes> InvalidInputPressed;
+        public event Action<int, IInputCapturing.InputTypes> AlternatedInputPressed;
     
         private IInputCapturing.InputTypes _lastInputTypePressed = IInputCapturing.InputTypes.None;
 
-        public ClownAlternatingInput(int deviceId) : base(deviceId) { }
+        public PlayerAlternatingInput(int deviceId) : base(deviceId) { }
 
         protected override void OnInputPressed(IInputCapturing.InputTypes inputType)
         {

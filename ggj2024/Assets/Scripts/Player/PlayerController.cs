@@ -1,9 +1,9 @@
-using Clown.ClownInput;
+using Player.PlayerInput;
 using UnityEngine;
 
-namespace Clown
+namespace Player
 {
-    public class CharacterController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         public int PlayerIndex; 
         public IInputCapturing InputCapturing { get; set; }

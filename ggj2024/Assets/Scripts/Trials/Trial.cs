@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Trials.Data;
 using UnityEngine;
 
 namespace Trials

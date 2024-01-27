@@ -1,8 +1,11 @@
-using Clown;
+using Player;
 
-public class PlayerTrialData
+namespace Trials.Data
 {
-    public CharacterController CharacterController;
+    public class PlayerTrialData
+    {
+        public PlayerController PlayerController;
 
-    public int PlayerIndex => CharacterController.PlayerIndex;
+        public int PlayerIndex => PlayerController.PlayerIndex;
+    }
 }
