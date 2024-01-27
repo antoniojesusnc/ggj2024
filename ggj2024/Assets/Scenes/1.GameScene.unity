@@ -908,9 +908,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505848212a301b048908d05dd3b783a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _persistent: 0
   _uiBegin: {fileID: 957850307}
   _uiEndLevel: {fileID: 323524880}
   _uiLevelTimer: {fileID: 3973908212532261772}
+  <PlayerContainer>k__BackingField: {fileID: 1286802676}
 --- !u!224 &1060367311
 RectTransform:
   m_ObjectHideFlags: 0
