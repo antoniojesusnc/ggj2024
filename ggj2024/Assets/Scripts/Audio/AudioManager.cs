@@ -51,6 +51,7 @@ public class AudioManager : Singleton<AudioManager>
         audioSource.pitch = soundConfigInfo.PitchVariance == 0
             ? 1f
             : Random.Range(1 - soundConfigInfo.PitchVariance, 1 + soundConfigInfo.PitchVariance);
+        audioSource.loop = soundConfigInfo.Loopable;
         audioSource.Play();
         return audioSource;
     }

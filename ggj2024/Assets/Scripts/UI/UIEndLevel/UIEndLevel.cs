@@ -106,6 +106,20 @@ public class UIEndLevel : MonoBehaviour
 
     private int GetMaxValue()
     {
+        var list = BellySlap.Instance.PlayerTrialDatas.Values.ToList();
+        int max = list[0].SlapCount; 
+        for (int i = 0; i < list.Count; i++)
+        {
+            if (list[i].SlapCount > max)
+            {
+                max = list[i].SlapCount;
+            }
+            
+        }
+
+        return max;
+        
+        
         if (HighScoreService.Instance?.HighScores.Count > 0)
         {
             return HighScoreService.Instance.HighScores[0].Score;

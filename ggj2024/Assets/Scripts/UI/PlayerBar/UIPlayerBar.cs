@@ -65,7 +65,7 @@ public class UIPlayerBar : MonoBehaviour
         _textOutline.text = "0";
         
         var audioSource = AudioManager.Instance.PlaySound(AudioTypes.tintineo_ascendente);
-        audioSource.DOPitch(_factor * _config.MaxPitch, _config.FillSpeed);
+        audioSource.DOPitch(_factor * _config.MaxPitch, _config.FillSpeed).onComplete += CloseAudio;
         _image.DOFillAmount(_factor, _config.FillSpeed).SetEase(_config.Ease).onComplete += () => OnFinishBarAnimate(callback);
 
         DOVirtual.Float(0, PlayerBellySlapData.SlapCount, _config.FillSpeed,
@@ -74,6 +74,11 @@ public class UIPlayerBar : MonoBehaviour
                             _text.text = number.ToString("#");
                             _textOutline.text = number.ToString("#");
                         });
+    }
+
+    private void CloseAudio()
+    {
+        AudioManager.Instance.DestroyAudioSourceAfter(AudioTypes.tintineo_ascendente, 0.2f);
     }
 
     private void OnFinishBarAnimate(Action callback)

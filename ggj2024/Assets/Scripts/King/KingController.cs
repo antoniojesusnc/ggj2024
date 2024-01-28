@@ -53,10 +53,12 @@ public class KingController : Singleton<KingController>
         else if (animation == Animations.midsmile)
         {
             _animator.SetInteger("smile",1);
+            AudioManager.Instance.PlaySound(AudioTypes.risa_monstruo_pequeña);
         }
         else if (animation == Animations.bigsmile)
         {
             _animator.SetInteger("smile",2);
+            AudioManager.Instance.PlaySound(AudioTypes.risa_monstruo_grande);
         }
 
         SetAnimation(Animations.smile);
