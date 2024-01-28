@@ -1,17 +1,16 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    [SerializeField]
-    private AudioConfig _audioConfig;
+    [SerializeField] private AudioConfig _audioConfig;
 
     private List<AudioManagerInfo> _audioSourcesInfo = new();
+    public bool IsSFXEnabled { get; private set; }
+    public bool IsMusicEnable { get; private set; }
 
     public AudioSource PlaySound(AudioTypes audioType)
     {
@@ -35,14 +34,15 @@ public class AudioManager : Singleton<AudioManager>
         if (parent == transform)
         {
             audioSource = GetAudioSource();
-            _audioSourcesInfo.Add( new AudioManagerInfo(soundConfigInfo.AudioType, audioSource));
+            _audioSourcesInfo.Add(new AudioManagerInfo(soundConfigInfo.AudioType, audioSource));
         }
         else
         {
             audioSource = GetNewAudioSource(parent);
             var managerInfo = new AudioManagerInfo(soundConfigInfo.AudioType, audioSource);
-            _audioSourcesInfo.Add( managerInfo);
-            StartCoroutine(DestroyAudioSourceAfterCo(managerInfo, soundConfigInfo.AudioClip.length + soundConfigInfo.FadeOut));
+            _audioSourcesInfo.Add(managerInfo);
+            StartCoroutine(DestroyAudioSourceAfterCo(managerInfo,
+                                                     soundConfigInfo.AudioClip.length + soundConfigInfo.FadeOut));
         }
 
         transform.position = transform.position + transform.forward;
@@ -77,7 +77,7 @@ public class AudioManager : Singleton<AudioManager>
             StartCoroutine(DestroyAudioSourceAfterCo(audioSourcesInfo, delayToDestroy));
         }
     }
-    
+
     private IEnumerator DestroyAudioSourceAfterCo(AudioManagerInfo audioSourcesInfo, float audioClipLength)
     {
         yield return new WaitForSeconds(audioClipLength);
@@ -97,15 +97,16 @@ public class AudioManager : Singleton<AudioManager>
             audioSourcesInfo.AudioSource.Stop();
             Destroy(audioSourcesInfo.AudioSource);
         }
+
         _audioSourcesInfo.Remove(audioSourcesInfo);
         OnDestroySound(audioSourcesInfo.AudioTypes);
     }
 
     private void OnDestroySound(AudioTypes audioTypes)
     {
-        
+
     }
-    
+
     private AudioSource GetAudioSource()
     {
         var audioSources = GetComponents<AudioSource>();
@@ -127,18 +128,19 @@ public class AudioManager : Singleton<AudioManager>
         if (parent != transform)
         {
         }
+
         return audioSource;
 
     }
 
     public void FinishAudio(AudioTypes audioToFade)
     {
-        var audioSourcesInfo =_audioSourcesInfo.Find(audioInfo => audioInfo.AudioTypes == audioToFade);
+        var audioSourcesInfo = _audioSourcesInfo.Find(audioInfo => audioInfo.AudioTypes == audioToFade);
         if (audioSourcesInfo == null)
         {
             return;
         }
-        
+
         FadeOut(audioSourcesInfo);
     }
 
@@ -165,6 +167,31 @@ public class AudioManager : Singleton<AudioManager>
         }
 
         return audioSourcesInfo.AudioClip.length;
+    }
+
+    public void SetSFX(bool isSFXEnabled)
+    {
+        IsSFXEnabled = isSFXEnabled;
+
+        CheckVolumens();
+    }
+
+    private void CheckVolumens()
+    {
+        for (int i = 0; i < _audioSourcesInfo.Count; i++)
+        {
+            if (!_audioSourcesInfo[i].AudioSource.isPlaying)
+            {
+                continue;
+            }
+
+            if (!_audioConfig.TryGetSoundConfig(_audioSourcesInfo[i].AudioTypes, out var configInfo))
+            {
+                continue;
+            }
+            
+            
+        }
     }
 }
 

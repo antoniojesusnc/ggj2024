@@ -104,7 +104,7 @@ MonoBehaviour:
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
   - <AudioType>k__BackingField: 20
-    <AudioClip>k__BackingField: {fileID: 0}
+    <AudioClip>k__BackingField: {fileID: 8300000, guid: 69423afde06acbd43adbc67f3f918ecc, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0

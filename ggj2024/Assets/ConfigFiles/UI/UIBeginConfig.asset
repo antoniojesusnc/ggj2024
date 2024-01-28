@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CountDown>k__BackingField: 4
   <InitialText>k__BackingField: Let's Begin
-  <FinalText>k__BackingField: GO!
+  <FinalText>k__BackingField: Laugh!
   <NumberScale>k__BackingField: {x: 2, y: 2, z: 2}
   <NumberTime>k__BackingField: 1
   <NumberEase>k__BackingField: 6
