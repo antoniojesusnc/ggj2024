@@ -72,6 +72,7 @@ namespace Player
         {
             if (!_levelStarted)
             {
+                --_playerDataInput.SlapCount;
                 SetAnimator(PlayerAnimation.hi);
                 return;
             }
