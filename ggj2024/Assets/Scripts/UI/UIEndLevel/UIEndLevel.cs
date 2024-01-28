@@ -5,7 +5,6 @@ using DG.Tweening;
 using TMPro;
 using Trials;
 using Trials.Data;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class UIEndLevel : MonoBehaviour
@@ -19,9 +18,9 @@ public class UIEndLevel : MonoBehaviour
     
     [SerializeField] private Transform _parent;
 
-    [SerializeField] private UIEndLevelPlayerBar _uiEndLevelPlayerBarPrefab;
-
-    private List<UIEndLevelPlayerBar> _endLevelPlayerBars = new List<UIEndLevelPlayerBar>();
+    [SerializeField] private UIPlayerBar uiPlayerBarPrefab;
+    
+    private List<UIPlayerBar> _endLevelPlayerBars = new List<UIPlayerBar>();
     private List<PlayerBellySlapData> _players;
 
     private Tween _idleAnim;
@@ -38,7 +37,7 @@ public class UIEndLevel : MonoBehaviour
         _finalText.gameObject.SetActive(false);
         _winnerText.gameObject.SetActive(false);
         _continueButton.gameObject.SetActive(false);
-        CreateSpawnBars();
+        AssingSpawnBars();
 
         ShowMessage();
 
@@ -87,15 +86,21 @@ public class UIEndLevel : MonoBehaviour
         EndBarAnimation();
     }
 
-    private void CreateSpawnBars()
+    private void AssingSpawnBars()
     {
         int maxValue = GetMaxValue();
         for (int i = 0; i < _players.Count; i++)
         {
-            var spawnMarker = GetSpawnMarker(_players[i]);
+            var spawnMarker = GetPlayerBar(_players[i]);
             spawnMarker.Init(_players[i], _players[i].SlapCount/(float)maxValue);
             _endLevelPlayerBars.Add(spawnMarker);
         }
+    }
+
+    private UIPlayerBar GetPlayerBar(PlayerBellySlapData player)
+    {
+        // TODO
+        return null;
     }
 
     private int GetMaxValue()
@@ -111,13 +116,7 @@ public class UIEndLevel : MonoBehaviour
         return max;
     }
 
-    private UIEndLevelPlayerBar GetSpawnMarker(PlayerBellySlapData playerController)
-    {
-        return Instantiate(_uiEndLevelPlayerBarPrefab, 
-                           playerController.PlayerController.transform.position + _config.BarOffset,
-                           quaternion.identity,
-                           _parent);
-    }
+    
     
     private void EndBarAnimation()
     {

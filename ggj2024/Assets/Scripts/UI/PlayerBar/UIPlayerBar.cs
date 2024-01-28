@@ -1,21 +1,31 @@
 using System;
+using System.Timers;
 using DG.Tweening;
-using Player;
+using Player.PlayerInput;
 using Trials.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIEndLevelPlayerBar : MonoBehaviour
+public class UIPlayerBar : MonoBehaviour
 {
-    [SerializeField] private UIEndLevelPlayerBarConfig _config;
+    [SerializeField] private UIPlayerBarConfig _config;
     
     [SerializeField] private Image _image;
     
     private float _factor;
+
+    private float _fillValue;
     
     public void Init(PlayerBellySlapData playersController, float factor)
     {
         _factor = factor;
+        playersController.NewSlapCount += NewSlapCount;
+        _image.fillAmount = 0;
+    }
+
+    private void NewSlapCount(IInputCapturing.InputTypes input)
+    {
+        _fillValue = _config.IncreasePerInput;
     }
 
     public void Animate(Action callback)
@@ -32,5 +42,13 @@ public class UIEndLevelPlayerBar : MonoBehaviour
             AudioManager.Instance.PlaySound(AudioTypes.explosión);
         }
         callback?.Invoke();
+    }
+
+    void Update()
+    {
+        _image.fillAmount -= _config.DownSpeed * Time.deltaTime;
+        _image.fillAmount += _fillValue;
+
+        _fillValue = 0;
     }
 }

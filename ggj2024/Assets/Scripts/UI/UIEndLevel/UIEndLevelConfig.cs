@@ -13,8 +13,6 @@ public class UIEndLevelConfig : ScriptableObject
     public Ease TextFinalEase { get; private set; }
     
     [field: SerializeField]
-    public Vector3 BarOffset { get; private set; }
-    [field: SerializeField]
     public float TimeToLaugh { get; set; }
     
     [field: SerializeField] 
