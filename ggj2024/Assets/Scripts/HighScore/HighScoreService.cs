@@ -7,6 +7,8 @@ public class HighScoreService : Singleton<HighScoreService>
     private const int MAX_HIGH_SCORES = 10;
     private const string SAVE_KEY = "HighScores";
 
+    public int DefaultHighScore => 150; 
+    
     public List<HighScoreModel> HighScores { get; private set; } = new List<HighScoreModel>();
     
     public void LoadHighScores()

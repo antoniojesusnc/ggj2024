@@ -103,15 +103,14 @@ public class UIEndLevel : MonoBehaviour
 
     private int GetMaxValue()
     {
-        var max = _players[0].SlapCount;
-        for (int i = 0; i < _players.Count; i++)
+        if (HighScoreService.Instance?.HighScores.Count > 0)
         {
-            if (_players[i].SlapCount > max)
-            {
-                max = _players[i].SlapCount;
-            }
+            return HighScoreService.Instance.HighScores[0].Score;
         }
-        return max;
+        else
+        {
+            return HighScoreService.Instance.DefaultHighScore;
+        }
     }
     
     private void EndBarAnimation()
