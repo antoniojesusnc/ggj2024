@@ -1,3 +1,4 @@
+using System;
 using Trials;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class GameUI : Singleton<GameUI>
 
     [field:SerializeField]
     public Transform PlayerContainer { get; private set; }
+    
+    public event Action FinishedCountdown;
 
 
     private BellySlap _bellySlap;
@@ -18,19 +21,28 @@ public class GameUI : Singleton<GameUI>
         _uiEndLevel.gameObject.SetActive(false);
         _uiLevelTimer.gameObject.SetActive(false);
         
-        
         _bellySlap = BellySlap.Instance as BellySlap;
 
-        _bellySlap.OnLevelBegin += OnLevelBegin;
-        _bellySlap.OnLevelFinish += OnFinishGameplay;
-        
-        Begin();
+        SubscribeEvents();
     }
 
-    private void Begin()
+    private void SubscribeEvents()
+    {
+        _bellySlap.OnLevelBegin += OnLevelBegin;
+        _bellySlap.OnLevelFinish += OnFinishGameplay;
+        _uiBegin.Finished += OnFinishedCountdown;
+    }
+
+    private void UnsubscribeEvents()
+    {
+        _bellySlap.OnLevelBegin -= OnLevelBegin;
+        _bellySlap.OnLevelFinish -= OnFinishGameplay;
+        _uiBegin.Finished -= OnFinishedCountdown;
+    }
+
+    public void Begin()
     {
         _uiBegin.Init();
-        _uiBegin.Finished += FinishedCountDown;
     }
     
     private void OnLevelBegin()
@@ -39,9 +51,10 @@ public class GameUI : Singleton<GameUI>
         _uiLevelTimer.Init();
     }
 
-    private void FinishedCountDown()
+    private void OnFinishedCountdown()
     {
         _bellySlap.InitLevel();
+        FinishedCountdown?.Invoke();
     }
 
     private void OnFinishGameplay()

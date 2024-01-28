@@ -4,7 +4,7 @@ using UnityEngine;
 public class UIBeginConfig : ScriptableObject
 {
     [field: SerializeField, Header("texts")]
-    public int CountDown { get; private set; }
+    public int Countdown { get; private set; }
     
     [field: SerializeField, Header("texts")]
     public string InitialText { get; private set; }

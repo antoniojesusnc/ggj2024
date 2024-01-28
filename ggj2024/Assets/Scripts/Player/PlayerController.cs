@@ -9,11 +9,12 @@ namespace Player
         
         public int PlayerIndex;
         public IInputCapturing InputCapturing { get; set; }
+        
+        private PlayerModel _playerModel;
 
         private void Start()
         {
             SubscribeEvents();
-            StartCapturingInputs();
             _playerGraphic.Init(PlayerIndex);
         }
 
@@ -29,12 +30,23 @@ namespace Player
 
         private void SubscribeEvents()
         {
-            //InputCapturing.AlternatedInputPressed += ValidInputPressed;
+            GameUI.Instance.FinishedCountdown += OnFinishedCountdown;
         }
 
         private void UnsubscribeEvents()
         {
-            //InputCapturing.AlternatedInputPressed -= ValidInputPressed;
+            GameUI.Instance.FinishedCountdown -= OnFinishedCountdown;
+        }
+
+        private void OnFinishedCountdown()
+        {
+            StartCapturingInputs();
+        }
+
+        public void SetPlayerModel(PlayerModel playerModel)
+        {
+            _playerModel = playerModel;
+            // Todo set image color, player number, etc.
         }
     }
 }
