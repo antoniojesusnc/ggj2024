@@ -10,6 +10,7 @@ namespace Player
     {
         // Events
         public event Action<PlayerModel> PlayerJoined;
+        public event Action<int> AllPlayersIn;
 
         public int PlayerCount => _playerModels.Count;
 
@@ -52,6 +53,9 @@ namespace Player
             };
             // Trigger Player joined event
             PlayerJoined?.Invoke(_playerModels[deviceId]);
+            // Trigger max players in
+            if (PlayerCount >= maxPlayers)
+                AllPlayersIn?.Invoke(PlayerCount);
         }
 
         /// <summary>

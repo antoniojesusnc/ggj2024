@@ -9,6 +9,7 @@ public class GameUI : Singleton<GameUI>
     [SerializeField] private UILevelTimer _uiLevelTimer;
     
     [SerializeField] private GameObject _readyButton;
+    [SerializeField] private GameObject _pressStartText;
 
     [field:SerializeField]
     public Transform PlayerContainer { get; private set; }
@@ -32,11 +33,25 @@ public class GameUI : Singleton<GameUI>
 
     private void SubscribeEvents()
     {
+        _bellySlap.OnPlayerConnected += OnPlayerConnected;
+        _bellySlap.AllPlayersIn += OnAllPlayersIn;
         _bellySlap.OnLevelBegin += OnLevelBegin;
         _bellySlap.OnLevelFinish += OnFinishGameplay;
         _uiBegin.Finished += OnFinishedCountdown;
+    }
 
-        _bellySlap.OnPlayerConnected += OnPlayerConnected;
+    private void UnsubscribeEvents()
+    {
+        _bellySlap.OnPlayerConnected -= OnPlayerConnected;
+        _bellySlap.AllPlayersIn -= OnAllPlayersIn;
+        _bellySlap.OnLevelBegin -= OnLevelBegin;
+        _bellySlap.OnLevelFinish -= OnFinishGameplay;
+        _uiBegin.Finished -= OnFinishedCountdown;
+    }
+
+    private void OnAllPlayersIn()
+    {
+        HidePressStartMessage();
     }
 
     private void OnPlayerConnected()
@@ -44,20 +59,19 @@ public class GameUI : Singleton<GameUI>
         _readyButton.gameObject.SetActive(true);
     }
 
-    private void UnsubscribeEvents()
-    {
-        _bellySlap.OnLevelBegin -= OnLevelBegin;
-        _bellySlap.OnLevelFinish -= OnFinishGameplay;
-        _uiBegin.Finished -= OnFinishedCountdown;
-    }
-
     public void Begin()
     {
+        HidePressStartMessage();
         AudioManager.Instance.DestroyAudioSourceAfter(AudioTypes.musica_character);
         _uiBegin.Init();
         _bellySlap.BeginCountDown();
     }
-    
+
+    private void HidePressStartMessage()
+    {
+        _pressStartText.SetActive(false);
+    }
+
     private void OnLevelBegin()
     {
         _uiBegin.gameObject.SetActive(false);

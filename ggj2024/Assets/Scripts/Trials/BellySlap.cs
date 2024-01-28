@@ -17,6 +17,7 @@ namespace Trials
 
 
         public event Action OnPlayerConnected;
+        public event Action AllPlayersIn;
         public event Action OnBeginCountdown;
         public event Action OnLevelBegin;
         public event Action<float> OnUpdateTime; 
@@ -82,6 +83,11 @@ namespace Trials
         public void BeginCountDown()
         {
             OnBeginCountdown?.Invoke();
+        }
+
+        public void OnAllPlayersIn(int totalPlayers)
+        {
+            AllPlayersIn?.Invoke();
         }
     }
 }

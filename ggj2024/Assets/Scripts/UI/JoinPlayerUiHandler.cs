@@ -1,4 +1,3 @@
-using System.Linq;
 using Player;
 using Trials;
 using UnityEngine;
@@ -31,16 +30,23 @@ namespace UI
         private void SubscribeEvents()
         {
             JoinPlayer.PlayerJoined += OnPlayerJoined;
+            JoinPlayer.AllPlayersIn += OnAllPlayersIn;
         }
 
         private void UnsubscribeEvents()
         {
             JoinPlayer.PlayerJoined -= OnPlayerJoined;
+            JoinPlayer.AllPlayersIn -= OnAllPlayersIn;
         }
 
         private void OnPlayerJoined(PlayerModel playerModel)
         {
             ((BellySlap)BellySlap.Instance).JoinPlayer(playerModel);
+        }
+
+        private void OnAllPlayersIn(int totalPlayers)
+        {
+            ((BellySlap)BellySlap.Instance).OnAllPlayersIn(totalPlayers);
         }
     }
 }
