@@ -24,7 +24,7 @@ public class UIBeginMessage : MonoBehaviour
         _counter.gameObject.SetActive(false);
         _countdown = _config.Countdown;
         
-        DoNumberAnimation(_config.NumberImages.Count-1);
+        DoNumberAnimation(_config.NumberImages.Count);
     }
 
     private void DoNumberAnimation(int countDown)
@@ -39,13 +39,14 @@ public class UIBeginMessage : MonoBehaviour
         _counterCanvas.alpha = 1;
 
         _counter.sprite = _config.NumberImages[_config.NumberImages.Count - countDown];
+        _counter.SetNativeSize();
         
         AudioManager.Instance.PlaySound(AudioTypes.sonido_de_comienzo);
 
         var sequence = DOTween.Sequence();
         sequence.Append(_counter.transform.DOScale(_config.NumberScale, _config.NumberTime));
         sequence.Insert(_config.TimeToBeginFadeOut,
-                        _counter.DOFade(0, _config.NumberTime - _config.TimeToBeginFadeOut));
+                        _counterCanvas.DOFade(0, _config.NumberTime - _config.TimeToBeginFadeOut));
         sequence.onComplete += OnEndNumber;
     }
 
@@ -53,7 +54,7 @@ public class UIBeginMessage : MonoBehaviour
     {
         --_countdown;
         string text = _countdown.ToString();
-        if (_countdown < 0)
+        if (_countdown <= 0)
         {
             OnFinished();
             return;
