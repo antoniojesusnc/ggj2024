@@ -40,4 +40,9 @@ public class GameManager : Singleton<GameManager>
     {
         Application.Quit();
     }
+
+    public void ShowHighScore()
+    {
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    }
 }

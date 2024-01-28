@@ -39,6 +39,7 @@ namespace Trials
             // Get the character controller of the new player and initialise its values
             PlayerController playerController = playerInput.GetComponent<PlayerController>();
             playerController.PlayerIndex = playerModel.PlayerIndex;
+            playerController.SetPlayerModel(playerModel);
             // Instantiate and assign the Input capturing for this trial
             playerController.InputCapturing = InstantiateInputCapturing(playerModel.DeviceId);
             // Add to the dictionary of Character controllers

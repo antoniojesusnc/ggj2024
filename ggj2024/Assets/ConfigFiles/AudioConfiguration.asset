@@ -18,98 +18,118 @@ MonoBehaviour:
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 3
     <AudioClip>k__BackingField: {fileID: 8300000, guid: 051e139d0b2a26843a08d245b15fd735, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 4
     <AudioClip>k__BackingField: {fileID: 8300000, guid: 8be5527176098f24491f2db00fb15197, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0.1
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 5
     <AudioClip>k__BackingField: {fileID: 8300000, guid: 8be5527176098f24491f2db00fb15197, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0.1
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 6
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 7
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 8
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 9
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 10
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 11
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 12
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 13
     <AudioClip>k__BackingField: {fileID: 8300000, guid: 58c9f1b58653c2144a01868051ddb60b, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 14
     <AudioClip>k__BackingField: {fileID: 8300000, guid: 690c26ca82d837d4a8d36afa32d223ad, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 15
     <AudioClip>k__BackingField: {fileID: 8300000, guid: 3f151b78484e2dc42ba31e7940d4f6a3, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 16
     <AudioClip>k__BackingField: {fileID: 8300000, guid: 5fc32df9ded00d04dbfab7f301eff2ad, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 17
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 18
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0
   - <AudioType>k__BackingField: 19
     <AudioClip>k__BackingField: {fileID: 8300000, guid: af436972f5454334e9617d161fa69562, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 1
   - <AudioType>k__BackingField: 20
     <AudioClip>k__BackingField: {fileID: 8300000, guid: 69423afde06acbd43adbc67f3f918ecc, type: 3}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 1
   - <AudioType>k__BackingField: 21
     <AudioClip>k__BackingField: {fileID: 0}
     <Volume>k__BackingField: 0.5
     <FadeOut>k__BackingField: 0
     <PitchVariance>k__BackingField: 0
+    <IsMusic>k__BackingField: 0

@@ -15,11 +15,10 @@ MonoBehaviour:
   <TextFinalScale>k__BackingField: 2
   <TextFinalDuration>k__BackingField: 2
   <TextFinalEase>k__BackingField: 6
-  <BarOffset>k__BackingField: {x: 1, y: 0, z: 0}
   <TimeToLaugh>k__BackingField: 1
-  <TextWinnerScale>k__BackingField: 2
+  <TextWinnerScale>k__BackingField: 1.1
   <TextWinnerDuration>k__BackingField: 2
   <TextWinnerEase>k__BackingField: 6
-  <TextWinnerIdleScale>k__BackingField: 2.1
+  <TextWinnerIdleScale>k__BackingField: 1.2
   <TextWinnerIdleDuration>k__BackingField: 5
   <TextWinnerIdleEase>k__BackingField: 1

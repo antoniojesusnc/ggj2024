@@ -77,9 +77,9 @@ public class UIEndLevel : MonoBehaviour
 
     private void ContinueWithBars(int index)
     {
-        KingController.Instance.SetAnimation(KingController.Animations.idle);
-        if (index < _endLevelPlayerBars.Count)
+        if (index+1 < _endLevelPlayerBars.Count)
         {
+            KingController.Instance.SetAnimation(KingController.Animations.idle);
             DoSpawnBar(index + 1);
         }
         EndBarAnimation();
@@ -149,7 +149,8 @@ public class UIEndLevel : MonoBehaviour
     {
         _idleAnim?.Kill();
         _idleAnim = null;
-        
+
+        GameManager.Instance.ShowHighScore();
         Finish?.Invoke();
     }
 }

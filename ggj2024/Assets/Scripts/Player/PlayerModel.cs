@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Player
@@ -7,6 +8,6 @@ namespace Player
         public int PlayerIndex;
         public InputDevice Device;
         public int DeviceId => Device.deviceId;
-        public int Colour;
+        public Color Color;
     }
 }

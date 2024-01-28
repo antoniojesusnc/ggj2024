@@ -2,6 +2,7 @@ using System;
 using System.Timers;
 using DG.Tweening;
 using Player.PlayerInput;
+using TMPro;
 using Trials;
 using Trials.Data;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class UIPlayerBar : MonoBehaviour
     [SerializeField] private UIPlayerBarConfig _config;
     
     [SerializeField] private Image _image;
+    [SerializeField] private GameObject _textObject;
+    [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private TextMeshProUGUI _textOutline;
     
     private float _factor;
 
@@ -23,6 +27,7 @@ public class UIPlayerBar : MonoBehaviour
     
     public void Init(PlayerBellySlapData playersController, float factor)
     {
+        _textObject.gameObject.SetActive(false);
         PlayerBellySlapData = playersController;
         
         _factor = factor;
@@ -33,6 +38,13 @@ public class UIPlayerBar : MonoBehaviour
         _bellySlap.OnLevelFinish += OnLevelFinish;
 
         _deductValues = true;
+
+        SetColor();
+    }
+
+    public void SetColor()
+    {
+        _image.color = PlayerBellySlapData.PlayerController.PlayerModel.Color;
     }
 
     private void OnLevelFinish()
@@ -47,9 +59,21 @@ public class UIPlayerBar : MonoBehaviour
 
     public void Animate(Action callback)
     {
+        _textObject.gameObject.SetActive(true);
+        
+        _text.text = "0";
+        _textOutline.text = "0";
+        
         var audioSource = AudioManager.Instance.PlaySound(AudioTypes.tintineo_ascendente);
         audioSource.DOPitch(_factor * _config.MaxPitch, _config.FillSpeed);
         _image.DOFillAmount(_factor, _config.FillSpeed).SetEase(_config.Ease).onComplete += () => OnFinishBarAnimate(callback);
+
+        DOVirtual.Float(0, PlayerBellySlapData.SlapCount, _config.FillSpeed,
+                        (number) =>
+                        {
+                            _text.text = number.ToString("#");
+                            _textOutline.text = number.ToString("#");
+                        });
     }
 
     private void OnFinishBarAnimate(Action callback)

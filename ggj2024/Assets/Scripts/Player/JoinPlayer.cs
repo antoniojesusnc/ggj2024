@@ -16,6 +16,9 @@ namespace Player
         [SerializeField]
         private int maxPlayers = 4;
         
+        [SerializeField]
+        private List<Color> _playerColors;
+        
         private readonly Dictionary<int, PlayerModel> _playerModels = new();
         private PlayerInputs _inputs;
     
@@ -44,6 +47,7 @@ namespace Player
             {
                 PlayerIndex = playerIndex,
                 Device = obj.control.device,
+                Color = _playerColors[playerIndex-1]
                 //Colour = // TODO: Generate colour 
             };
             // Trigger Player joined event

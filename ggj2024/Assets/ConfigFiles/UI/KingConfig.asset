@@ -15,13 +15,10 @@ MonoBehaviour:
   _laughRanges:
   - <MinValue>k__BackingField: 0
     <MaxValue>k__BackingField: 100
-    <Animation>k__BackingField: 5
+    <Animation>k__BackingField: 4
   - <MinValue>k__BackingField: 100
     <MaxValue>k__BackingField: 150
-    <Animation>k__BackingField: 4
+    <Animation>k__BackingField: 2
   - <MinValue>k__BackingField: 150
     <MaxValue>k__BackingField: 200
-    <Animation>k__BackingField: 2
-  - <MinValue>k__BackingField: 250
-    <MaxValue>k__BackingField: 300
     <Animation>k__BackingField: 0

@@ -109,8 +109,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5902045353961577596}
-  - {fileID: 7351213299565459209}
   - {fileID: 6234142025738477138}
+  - {fileID: 7351213299565459209}
   - {fileID: 1104654724618323357}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 5945921233961196321}
+  _clothes: {fileID: 8192675468863177759}
 --- !u!212 &4442744003729992952
 SpriteRenderer:
   m_ObjectHideFlags: 0

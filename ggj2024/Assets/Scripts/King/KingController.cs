@@ -17,6 +17,8 @@ public class KingController : Singleton<KingController>
     private Animator _animator;
     private BellySlap _bellySlap;
 
+    [SerializeField] private KingConfig _config;
+
     public void Start()
     {
         _animator = GetComponent<Animator>();
@@ -43,6 +45,20 @@ public class KingController : Singleton<KingController>
 
     public void Laugh(int slapCount)
     {
-        
+        var animation = _config.GetLaugh(slapCount);
+        if (animation == Animations.smallsmile)
+        {
+            _animator.SetInteger("smile", 0);
+        }
+        else if (animation == Animations.midsmile)
+        {
+            _animator.SetInteger("smile",1);
+        }
+        else if (animation == Animations.bigsmile)
+        {
+            _animator.SetInteger("smile",2);
+        }
+
+        SetAnimation(Animations.smile);
     }
 }

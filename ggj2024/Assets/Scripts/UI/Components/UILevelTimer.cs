@@ -18,7 +18,7 @@ public class UILevelTimer : MonoBehaviour
 
     private void OnUpdateTime(float deltaTime)
     {
-        _timerOutline.text = $"{deltaTime.ToString("#.00")}s";
-        _timer.text = $"{deltaTime.ToString("#.00")}s";
+        _timerOutline.text = $"{deltaTime.ToString("00.00")}s";
+        _timer.text = $"{deltaTime.ToString("00.00")}s";
     }
 }

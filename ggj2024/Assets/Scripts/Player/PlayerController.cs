@@ -10,7 +10,7 @@ namespace Player
         public int PlayerIndex;
         public IInputCapturing InputCapturing { get; set; }
         
-        private PlayerModel _playerModel;
+        public PlayerModel PlayerModel { get; private set; }
 
         private void Start()
         {
@@ -49,7 +49,7 @@ namespace Player
 
         public void SetPlayerModel(PlayerModel playerModel)
         {
-            _playerModel = playerModel;
+            PlayerModel = playerModel;
             // Todo set image color, player number, etc.
         }
     }
