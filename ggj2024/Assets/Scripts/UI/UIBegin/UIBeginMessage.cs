@@ -25,15 +25,11 @@ public class UIBeginMessage : MonoBehaviour
         _countdown = _config.Countdown;
         
         DoNumberAnimation(_config.NumberImages.Count);
+            AudioManager.Instance.PlaySound(AudioTypes.three_two_one_laught_para_el_juego);
     }
 
     private void DoNumberAnimation(int countDown)
     {
-        if (_countdown == 3)
-        {
-            AudioManager.Instance.PlaySound(AudioTypes.three_two_one_laught_para_el_juego);
-        }
-        
         _counter.gameObject.SetActive(true);
         _counter.transform.localScale = Vector3.zero;
         _counterCanvas.alpha = 1;
