@@ -149,7 +149,7 @@ public class UIEndLevel : MonoBehaviour
 
     private int SortBySlap(PlayerBellySlapData x, PlayerBellySlapData y)
     {
-        return x.SlapCount.CompareTo(y.SlapCount);
+        return y.SlapCount.CompareTo(x.SlapCount);
     }
 
     public void OnClickInContinue()
