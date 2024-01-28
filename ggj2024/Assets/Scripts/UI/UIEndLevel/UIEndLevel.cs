@@ -13,9 +13,10 @@ public class UIEndLevel : MonoBehaviour
     [SerializeField] private UIEndLevelConfig _config;
     
     [Header("Items")]
-    [SerializeField] private TextMeshProUGUI _finalText;
+    [SerializeField] private Transform _finalText;
     
     [SerializeField] private TextMeshProUGUI _winnerText;
+    [SerializeField] private TextMeshProUGUI _winnerTextOutline;
     [SerializeField] private GameObject _continueButton;
     
     [SerializeField] private UIPlayerBarManager _bars;
@@ -23,7 +24,8 @@ public class UIEndLevel : MonoBehaviour
     private List<UIPlayerBar> _endLevelPlayerBars = new List<UIPlayerBar>();
     private List<PlayerBellySlapData> _players;
 
-    private Tween _idleAnim;
+    private Tween _idleAnim01;
+    private Tween _idleAnim02;
 
     public event Action Finish;
 
@@ -36,6 +38,7 @@ public class UIEndLevel : MonoBehaviour
         
         _finalText.gameObject.SetActive(false);
         _winnerText.gameObject.SetActive(false);
+        _winnerTextOutline.gameObject.SetActive(false);
         _continueButton.gameObject.SetActive(false);
         AssingSpawnBars();
 
@@ -116,7 +119,10 @@ public class UIEndLevel : MonoBehaviour
     private void EndBarAnimation()
     {
         _winnerText.text = "The Winner is P" + _players[0].PlayerIndex;
+        _winnerTextOutline.text = "The Winner is P" + _players[0].PlayerIndex;
         _winnerText.DOScale(_config.TextWinnerScale, _config.TextWinnerDuration)
+                   .SetEase(_config.TextWinnerEase).onComplete += OnWinTextFinished;
+        _winnerTextOutline.DOScale(_config.TextWinnerScale, _config.TextWinnerDuration)
                    .SetEase(_config.TextWinnerEase).onComplete += OnWinTextFinished;
         MakeWinLoseAnimationsForPlayers();
         
@@ -125,8 +131,10 @@ public class UIEndLevel : MonoBehaviour
 
     private void OnWinTextFinished()
     {
-        _idleAnim = _winnerText.DOScale(_config.TextWinnerIdleScale, _config.TextWinnerIdleDuration)
+        _idleAnim01 = _winnerText.DOScale(_config.TextWinnerIdleScale, _config.TextWinnerIdleDuration)
                             .SetEase(_config.TextWinnerIdleEase).SetLoops(9999, LoopType.Yoyo);
+        _idleAnim02 = _winnerTextOutline.DOScale(_config.TextWinnerIdleScale, _config.TextWinnerIdleDuration)
+                               .SetEase(_config.TextWinnerIdleEase).SetLoops(9999, LoopType.Yoyo);
     }
 
     private void MakeWinLoseAnimationsForPlayers()
@@ -146,8 +154,11 @@ public class UIEndLevel : MonoBehaviour
 
     public void OnClickInContinue()
     {
-        _idleAnim?.Kill();
-        _idleAnim = null;
+        _idleAnim01?.Kill();
+        _idleAnim01 = null;
+        
+        _idleAnim02?.Kill();
+        _idleAnim02 = null;
 
         GameManager.Instance.ShowHighScore();
         Finish?.Invoke();

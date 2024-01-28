@@ -12,7 +12,7 @@ public class KingConfig : ScriptableObject
       for (int i = 0; i < _laughRanges.Count; i++)
       {
          if (_laughRanges[i].MinValue <= slapCount
-             && slapCount > _laughRanges[i].MaxValue)
+             && slapCount < _laughRanges[i].MaxValue)
          {
             return _laughRanges[i].Animation;
          }
