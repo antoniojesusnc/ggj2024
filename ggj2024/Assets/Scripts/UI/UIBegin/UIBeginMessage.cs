@@ -18,14 +18,14 @@ public class UIBeginMessage : MonoBehaviour
 
     public event Action Finished;
 
-    private int _countDown;
+    private int _countdown;
 
     public void Init()
     {
         gameObject.SetActive(true);
         _counter.gameObject.SetActive(false);
         _counterOutline.gameObject.SetActive(false);
-        _countDown = _config.CountDown;
+        _countdown = _config.Countdown;
         
         DoNumberAnimation(_config.InitialText);
     }
@@ -55,20 +55,20 @@ public class UIBeginMessage : MonoBehaviour
 
     private void OnEndNumber()
     {
-        --_countDown;
-        string text = _countDown.ToString();
-        if (_countDown < 0)
+        --_countdown;
+        string text = _countdown.ToString();
+        if (_countdown < 0)
         {
             OnFinished();
             return;
         }
 
-        if (_countDown == 0)
+        if (_countdown == 0)
         {
             text = _config.FinalText;
         }
 
-        if (_countDown == 3)
+        if (_countdown == 3)
         {
             AudioManager.Instance.PlaySound(AudioTypes.three_two_one_laught_para_el_juego);
         }

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Player;
 using Player.PlayerInput;
 using Trials.Data;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Trials
@@ -33,7 +34,7 @@ namespace Trials
         {
             // Join the player (instantiate its GameObject)
             PlayerInput playerInput = PlayerInputManager.JoinPlayer(playerIndex: playerModel.PlayerIndex, pairWithDevice: playerModel.Device);
-            playerInput.gameObject.transform.SetParent(GameUI.Instance.PlayerContainer);
+            playerInput.transform.SetParent(GameUI.Instance.PlayerContainer, false);
             // TODO: Place properly in the scene
             // Get the character controller of the new player and initialise its values
             PlayerController playerController = playerInput.GetComponent<PlayerController>();

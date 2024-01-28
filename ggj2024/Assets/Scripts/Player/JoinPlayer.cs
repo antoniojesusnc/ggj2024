@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -11,6 +12,9 @@ namespace Player
         public event Action<PlayerModel> PlayerJoined;
 
         public int PlayerCount => _playerModels.Count;
+
+        [SerializeField]
+        private int maxPlayers = 4;
         
         private readonly Dictionary<int, PlayerModel> _playerModels = new();
         private PlayerInputs _inputs;
@@ -25,6 +29,9 @@ namespace Player
 
         private void JoinPressed(InputAction.CallbackContext obj)
         {
+            // Don't allow to join more players than allowed
+            if (PlayerCount >= maxPlayers) return;
+            
             // Get the controller ID
             int deviceId = obj.control.device.deviceId;
             // The device has already joined --> Do nothing

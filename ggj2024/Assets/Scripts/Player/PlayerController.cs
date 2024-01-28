@@ -15,7 +15,6 @@ namespace Player
         private void Start()
         {
             SubscribeEvents();
-            StartCapturingInputs();
             _playerGraphic.Init(PlayerIndex);
         }
 
@@ -31,12 +30,17 @@ namespace Player
 
         private void SubscribeEvents()
         {
-            //InputCapturing.AlternatedInputPressed += ValidInputPressed;
+            GameUI.Instance.FinishedCountdown += OnFinishedCountdown;
         }
 
         private void UnsubscribeEvents()
         {
-            //InputCapturing.AlternatedInputPressed -= ValidInputPressed;
+            GameUI.Instance.FinishedCountdown -= OnFinishedCountdown;
+        }
+
+        private void OnFinishedCountdown()
+        {
+            StartCapturingInputs();
         }
 
         public void SetPlayerModel(PlayerModel playerModel)
