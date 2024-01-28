@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
@@ -21,4 +22,8 @@ public class UIBeginConfig : ScriptableObject
     public float TimeToBeginFadeOut { get; private set; }
     [field: SerializeField]
     public float TimeBetweenNumbers { get; private set; }
+
+    
+    [field: SerializeField]
+    public List<Sprite> NumberImages { get; private set; }
 }

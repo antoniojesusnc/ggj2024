@@ -1,20 +1,18 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIBeginMessage : MonoBehaviour
 {
     [SerializeField] private UIBeginConfig _config;
     
     [SerializeField]
-    private CanvasGroup _counter;
+    public Image _counter;
     [SerializeField]
-    private CanvasGroup _counterOutline;
-    [SerializeField]
-    private TextMeshProUGUI _counterText;
-    [SerializeField]
-    private TextMeshProUGUI _counterTextOutline;
+    public CanvasGroup _counterCanvas;
 
     public event Action Finished;
 
@@ -24,32 +22,30 @@ public class UIBeginMessage : MonoBehaviour
     {
         gameObject.SetActive(true);
         _counter.gameObject.SetActive(false);
-        _counterOutline.gameObject.SetActive(false);
         _countdown = _config.Countdown;
         
-        DoNumberAnimation(_config.InitialText);
+        DoNumberAnimation(_config.NumberImages.Count-1);
     }
 
-    private void DoNumberAnimation(string text)
+    private void DoNumberAnimation(int countDown)
     {
+        if (_countdown == 3)
+        {
+            AudioManager.Instance.PlaySound(AudioTypes.three_two_one_laught_para_el_juego);
+        }
+        
         _counter.gameObject.SetActive(true);
         _counter.transform.localScale = Vector3.zero;
-        _counter.alpha = 1;
-        _counterOutline.gameObject.SetActive(true);
-        _counterOutline.transform.localScale = Vector3.zero;
-        _counterOutline.alpha = 1;
+        _counterCanvas.alpha = 1;
+
+        _counter.sprite = _config.NumberImages[_config.NumberImages.Count - countDown];
         
         AudioManager.Instance.PlaySound(AudioTypes.sonido_de_comienzo);
-        
-        _counterText.text = text;
-        _counterTextOutline.text = text;
+
         var sequence = DOTween.Sequence();
         sequence.Append(_counter.transform.DOScale(_config.NumberScale, _config.NumberTime));
-        sequence.Insert(0, _counterOutline.transform.DOScale(_config.NumberScale, _config.NumberTime));
         sequence.Insert(_config.TimeToBeginFadeOut,
                         _counter.DOFade(0, _config.NumberTime - _config.TimeToBeginFadeOut));
-        sequence.Insert(_config.TimeToBeginFadeOut,
-                        _counterOutline.DOFade(0, _config.NumberTime - _config.TimeToBeginFadeOut));
         sequence.onComplete += OnEndNumber;
     }
 
@@ -63,17 +59,7 @@ public class UIBeginMessage : MonoBehaviour
             return;
         }
 
-        if (_countdown == 0)
-        {
-            text = _config.FinalText;
-        }
-
-        if (_countdown == 3)
-        {
-            AudioManager.Instance.PlaySound(AudioTypes.three_two_one_laught_para_el_juego);
-        }
-        
-        DOVirtual.DelayedCall(_config.TimeBetweenNumbers, () => DoNumberAnimation(text));
+        DOVirtual.DelayedCall(_config.TimeBetweenNumbers, () => DoNumberAnimation(_countdown));
     }
 
     private void OnFinished()
