@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Player.PlayerInput;
 using UnityEngine;
 
@@ -11,6 +13,8 @@ namespace Player
         public IInputCapturing InputCapturing { get; set; }
         
         public PlayerModel PlayerModel { get; private set; }
+        [SerializeField]
+        private List<GameObject> _playersText;
 
         private void Start()
         {
@@ -50,7 +54,17 @@ namespace Player
         public void SetPlayerModel(PlayerModel playerModel)
         {
             PlayerModel = playerModel;
+
+            SetPlayerText();
             // Todo set image color, player number, etc.
+        }
+
+        private void SetPlayerText()
+        {
+            for (int i = 0; i < _playersText.Count; i++)
+            {
+                _playersText[i].gameObject.SetActive(i == PlayerModel.PlayerIndex-1);
+            }
         }
     }
 }

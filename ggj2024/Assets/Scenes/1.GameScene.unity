@@ -1218,9 +1218,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayers: 4
   _playerColors:
-  - {r: 0, g: 0.60784316, b: 1, a: 1}
-  - {r: 1, g: 0, b: 0.35686275, a: 1}
   - {r: 1, g: 0.84313726, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0.35686275, a: 1}
+  - {r: 0, g: 0.60784316, b: 1, a: 1}
   - {r: 0, g: 1, b: 0.6745098, a: 1}
 --- !u!1 &1090398997
 GameObject:
