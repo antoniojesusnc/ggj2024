@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5658e24c2ef9413478ee2419f8d13fec, type: 3}
-  m_Name: LevelConfig 1
+  m_Name: KingConfig
   m_EditorClassIdentifier: 
   _laughRanges:
   - <MinValue>k__BackingField: 0
