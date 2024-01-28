@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
 public class MainMenuUI : Singleton<MainMenuUI>
@@ -9,6 +10,7 @@ public class MainMenuUI : Singleton<MainMenuUI>
 
     void Start()
     {
+
         AudioManager.Instance.PlaySound(AudioTypes.musica_main_menu_divertida_y_tranquila);
         
         _exitButton.gameObject.SetActive(Application.platform == RuntimePlatform.WindowsEditor ||
@@ -18,6 +20,7 @@ public class MainMenuUI : Singleton<MainMenuUI>
     public void BeginGame()
     {
         GameManager.Instance.BeginGame();
+        AudioManager.Instance.DestroyAudioSourceAfter(AudioTypes.musica_main_menu_divertida_y_tranquila, 0.5f);
     }
     
     public void OnClickInExit()
@@ -27,6 +30,6 @@ public class MainMenuUI : Singleton<MainMenuUI>
 
     private void OnDisable()
     {
-        AudioManager.Instance.DestroyAudioSourceAfter(AudioTypes.musica_main_menu_divertida_y_tranquila, 0.5f);
+        
     }
 }

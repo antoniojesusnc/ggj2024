@@ -20,11 +20,13 @@ public class PausePopup : MonoBehaviour
     public void ClickInRestart()
     {
         GameManager.Instance.BeginGame();
+        gameObject.SetActive(false);
     }
     
     public void ClickInExit()
     {
         GameManager.Instance.MainMenu();
+        gameObject.SetActive(false);
     }
 }
 
