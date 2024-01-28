@@ -67,7 +67,6 @@ namespace Player
         private void SetInitialAnimation()
         {
             SetAnimator(PlayerAnimation.idle);
-            AudioManager.Instance.PlaySound(AudioTypes.ropa_rasgandose);
         }
 
         public void SetAnimator(PlayerAnimation animation)

@@ -35,7 +35,11 @@ namespace Player
 
         private void UnsubscribeEvents()
         {
-            GameUI.Instance.FinishedCountdown -= OnFinishedCountdown;
+            var gameuiInstance = GameUI.Instance;
+            if (gameuiInstance != null)
+            {
+                gameuiInstance.FinishedCountdown -= OnFinishedCountdown;
+            }
         }
 
         private void OnFinishedCountdown()

@@ -16,7 +16,7 @@ MonoBehaviour:
   <InitialText>k__BackingField: Let's Begin
   <FinalText>k__BackingField: Laugh!
   <NumberScale>k__BackingField: {x: 2, y: 2, z: 2}
-  <NumberTime>k__BackingField: 1
+  <NumberTime>k__BackingField: 0.7
   <NumberEase>k__BackingField: 6
-  <TimeToBeginFadeOut>k__BackingField: 0.75
+  <TimeToBeginFadeOut>k__BackingField: 0.6
   <TimeBetweenNumbers>k__BackingField: 0.5

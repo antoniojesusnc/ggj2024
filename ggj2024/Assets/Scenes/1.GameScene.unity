@@ -896,6 +896,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &822212401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8165155069074682322, guid: ca387ebf89f994346b8aaecb39999a2e, type: 3}
+  m_PrefabInstance: {fileID: 3973908212532261771}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &957850306 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6759911805443142044, guid: 6ddb2c1c9bef1874f85d406b8540616f, type: 3}
@@ -1004,7 +1015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1057856378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1439,7 +1450,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 7
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -1569,7 +1580,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1064106857155873048, guid: 58f86fc25b92c444ebf6140393da4c5e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2812454179766950215, guid: 58f86fc25b92c444ebf6140393da4c5e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1691,13 +1702,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6865499972787468581, guid: 58f86fc25b92c444ebf6140393da4c5e, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6900822637480823616, guid: 58f86fc25b92c444ebf6140393da4c5e, type: 3}
       propertyPath: m_Name
       value: BeginButton
       objectReference: {fileID: 0}
     - target: {fileID: 6900822637480823616, guid: 58f86fc25b92c444ebf6140393da4c5e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1984,6 +1999,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTimer
       objectReference: {fileID: 0}
+    - target: {fileID: 1113376007130221068, guid: ca387ebf89f994346b8aaecb39999a2e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448558905991362784, guid: ca387ebf89f994346b8aaecb39999a2e, type: 3}
+      propertyPath: _timerOutline
+      value: 
+      objectReference: {fileID: 822212401}
     - target: {fileID: 6346552829799399118, guid: ca387ebf89f994346b8aaecb39999a2e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
