@@ -40,6 +40,9 @@ public class SoundConfigInfo
     
     [field: SerializeField] 
     public float PitchVariance { get; private set; }
+    
+    [field: SerializeField] 
+    public bool IsMusic { get; private set; }
 
     public SoundConfigInfo(AudioTypes audioType, AudioClip audioClip, float volume, float fadeOut)
     {

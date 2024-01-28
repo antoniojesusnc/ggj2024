@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -169,8 +169,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,8 +190,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,8 +211,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -232,8 +232,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -253,8 +253,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -274,8 +274,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -295,8 +295,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -316,8 +316,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -337,8 +337,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -358,8 +358,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -379,8 +379,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -400,8 +400,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -421,8 +421,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -442,8 +442,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -463,8 +463,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -484,8 +484,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -505,8 +505,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -526,8 +526,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -547,8 +547,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -568,8 +568,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -589,8 +589,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -610,8 +610,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -631,8 +631,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -652,8 +652,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -673,8 +673,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -694,8 +694,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -715,8 +715,8 @@ TextureImporter:
         y: 0
         width: 131
         height: 77
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -724,6 +724,468 @@ TextureImporter:
       bones: []
       spriteID: feca511ac1826ba4aacdce2daa9b060e
       internalID: -1195821329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_27
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2979bf5d6af810146abfbe4db35d2abf
+      internalID: -401368695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_28
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3001c288e4d556c4c8fc8773d1cc45a4
+      internalID: -1393991272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_29
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72465880ec8192a48bec7898e5eb0394
+      internalID: 2029223339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_30
+      rect:
+        serializedVersion: 2
+        x: 3930
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6a97031e4f56c46a09f3b40fed730b
+      internalID: -290044500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_31
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85653369ccaa8143b5ea03a98eaafc4
+      internalID: 1993171653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_32
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3dba07af5ff63d429d3614c6f91a14c
+      internalID: -271007876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_33
+      rect:
+        serializedVersion: 2
+        x: 4323
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734c3a3960f8be745ac041112628f123
+      internalID: -1334103234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_34
+      rect:
+        serializedVersion: 2
+        x: 4454
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893e2dea746083f4ca795eed5c664cce
+      internalID: -1143007466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_35
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea29f1d17bdee734cab51889f26f00a9
+      internalID: 1420735586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_36
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4ef2c4e3d6b2e4eafe3686fb6e5450
+      internalID: 1514624064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_37
+      rect:
+        serializedVersion: 2
+        x: 4847
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941527c4bce04644e96472a5fb0696fc
+      internalID: 1073405351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_38
+      rect:
+        serializedVersion: 2
+        x: 4978
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fc5c2b7b769944a83d19acbe25e2f5
+      internalID: 1016160579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_39
+      rect:
+        serializedVersion: 2
+        x: 5109
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebddd116856b95e4f904cf2284cf0f61
+      internalID: 1663090157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_40
+      rect:
+        serializedVersion: 2
+        x: 5240
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c31d3181dfad34185d8f8758a30f41
+      internalID: 881934557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_41
+      rect:
+        serializedVersion: 2
+        x: 5371
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cb12dbcb6c00646a6e045a635072f6
+      internalID: -1485338265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_42
+      rect:
+        serializedVersion: 2
+        x: 5502
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5d27ab93b18ed47b47b21281752aa8
+      internalID: 546096820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_43
+      rect:
+        serializedVersion: 2
+        x: 5633
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f8f574ac409e24dad120220f0052de
+      internalID: -736220057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_44
+      rect:
+        serializedVersion: 2
+        x: 5764
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0ab164a8365d443b890a864deaf93c
+      internalID: -2046219522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_45
+      rect:
+        serializedVersion: 2
+        x: 5895
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993a370b769818f47bd31ee14133bac7
+      internalID: -1899923651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_46
+      rect:
+        serializedVersion: 2
+        x: 6026
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da17629e5e291b34790bc3529617839a
+      internalID: -871467322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_47
+      rect:
+        serializedVersion: 2
+        x: 6157
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7082748dcdedd240bc8a699670e5c27
+      internalID: 2110016997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloths_48
+      rect:
+        serializedVersion: 2
+        x: 6288
+        y: 0
+        width: 131
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0e4f668896c92488b567236e24f7da
+      internalID: 20086547
       vertices: []
       indices: 
       edges: []
@@ -759,8 +1221,30 @@ TextureImporter:
       Cloths_24: 794070110
       Cloths_25: -851122576
       Cloths_26: -1195821329
+      Cloths_27: -401368695
+      Cloths_28: -1393991272
+      Cloths_29: 2029223339
       Cloths_3: -1500108311
+      Cloths_30: -290044500
+      Cloths_31: 1993171653
+      Cloths_32: -271007876
+      Cloths_33: -1334103234
+      Cloths_34: -1143007466
+      Cloths_35: 1420735586
+      Cloths_36: 1514624064
+      Cloths_37: 1073405351
+      Cloths_38: 1016160579
+      Cloths_39: 1663090157
       Cloths_4: 1482150186
+      Cloths_40: 881934557
+      Cloths_41: -1485338265
+      Cloths_42: 546096820
+      Cloths_43: -736220057
+      Cloths_44: -2046219522
+      Cloths_45: -1899923651
+      Cloths_46: -871467322
+      Cloths_47: 2110016997
+      Cloths_48: 20086547
       Cloths_5: 1786992007
       Cloths_6: 146495979
       Cloths_7: -1774692642

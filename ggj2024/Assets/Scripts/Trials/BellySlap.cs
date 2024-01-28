@@ -16,6 +16,8 @@ namespace Trials
         private bool _isPlaying;
 
 
+        public event Action OnPlayerConnected;
+        public event Action OnBeginCountdown;
         public event Action OnLevelBegin;
         public event Action<float> OnUpdateTime; 
         public event Action OnLevelFinish;
@@ -56,6 +58,8 @@ namespace Trials
 
         protected override IInputCapturing InstantiateInputCapturing(int deviceId)
         {
+            OnPlayerConnected?.Invoke();
+            
             PlayerAlternatingInput playerAlternatingInput = new(deviceId);
             playerAlternatingInput.AlternatedInputPressed += ValidInputPressed;
             return playerAlternatingInput;
@@ -72,6 +76,11 @@ namespace Trials
             if (!PlayerTrialDatas.TryGetValue(deviceId, out PlayerBellySlapData playerTrialData)) return;
             playerTrialData.AddSlapCount(inputType);
             Debug.Log($"Player {playerTrialData.PlayerIndex} pressed alternated {inputType} count: {playerTrialData.SlapCount}");
+        }
+
+        public void BeginCountDown()
+        {
+            OnBeginCountdown?.Invoke();
         }
     }
 }

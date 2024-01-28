@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c33c1bf00c4904f4ba696d0694b7ecf5
+guid: 891bf2f4386b98740a7d00f69ccce389
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -162,7 +162,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Clown_0
+      name: Outline_0
       rect:
         serializedVersion: 2
         x: 0
@@ -176,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e69c6aa5d0559a5448873fb0429c34d1
-      internalID: -1233969989
+      spriteID: 22df5b3b3fdacd0479c4bf6a4337e24b
+      internalID: 1731675918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_1
+      name: Outline_1
       rect:
         serializedVersion: 2
         x: 131
@@ -197,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 524c1b3b70e81e743b21217e596f0cfa
-      internalID: -599226132
+      spriteID: 303b021ae192236418ddb9683ed1ff14
+      internalID: 185897463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_2
+      name: Outline_2
       rect:
         serializedVersion: 2
         x: 262
@@ -218,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cfefff865ccb89489849b365df04969
-      internalID: 173437646
+      spriteID: b96cd6e3a7f5ca74abac7d32415fb0d6
+      internalID: -1874822517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_3
+      name: Outline_3
       rect:
         serializedVersion: 2
         x: 393
@@ -239,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 524e8d310fee2df4cb5aaa0efb437c01
-      internalID: -343866158
+      spriteID: d3af362b092b4654eafdfb492b347b5e
+      internalID: -634517843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_4
+      name: Outline_4
       rect:
         serializedVersion: 2
         x: 524
@@ -260,14 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65c0ef2cfefebd747828fc5dbcc3a4ba
-      internalID: -720881287
+      spriteID: fa0fe89979505ce409c450ac87e03eae
+      internalID: -1670114276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_5
+      name: Outline_5
       rect:
         serializedVersion: 2
         x: 655
@@ -281,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61ffe33a4f90e014b92f37856b16a220
-      internalID: -252023277
+      spriteID: 9a684b1e42570b645b6d641f2a37b4ba
+      internalID: -658655734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_6
+      name: Outline_6
       rect:
         serializedVersion: 2
         x: 786
@@ -302,14 +302,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23e4beaf4592b444aaedf8710841e924
-      internalID: 1513985404
+      spriteID: c568cf0b17abbe74c83d63fe19abeeb8
+      internalID: -939128928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_7
+      name: Outline_7
       rect:
         serializedVersion: 2
         x: 917
@@ -323,14 +323,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee328c9b7ad02c34b90c8906c810ec21
-      internalID: -1186592222
+      spriteID: 1ab62d48a1880234b8e920df070e4690
+      internalID: 232580144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_8
+      name: Outline_8
       rect:
         serializedVersion: 2
         x: 1048
@@ -344,14 +344,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80742a0db94978345ba58c3bc1fe025f
-      internalID: -584153114
+      spriteID: 57ad34ff3f5690e44a426a5dd5335bdf
+      internalID: -456398725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_9
+      name: Outline_9
       rect:
         serializedVersion: 2
         x: 1179
@@ -365,14 +365,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98692b1c69cce8f4b8ebd8912caee7f7
-      internalID: -1522213922
+      spriteID: 234505a0a16f5c744a05298231dedae8
+      internalID: 357716343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_10
+      name: Outline_10
       rect:
         serializedVersion: 2
         x: 1310
@@ -386,14 +386,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70146ce5e1e458742bfcf7bd8c68557d
-      internalID: 1639494367
+      spriteID: 57ad2ddd793ef7e4d956e186e5478d64
+      internalID: 623836233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_11
+      name: Outline_11
       rect:
         serializedVersion: 2
         x: 1441
@@ -407,14 +407,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 570cee01bf0fc9145a44447fddef14f5
-      internalID: 1760904998
+      spriteID: b6795131f97ecec4496df8d7efd9a8a1
+      internalID: 1409290282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_12
+      name: Outline_12
       rect:
         serializedVersion: 2
         x: 1572
@@ -428,14 +428,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a946375859f519429b8419b2d6353f8
-      internalID: 1748378719
+      spriteID: 0d498398f33e2b84da54cd8ab38e95d6
+      internalID: -930310067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_13
+      name: Outline_13
       rect:
         serializedVersion: 2
         x: 1703
@@ -449,14 +449,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dde08962b87b684fb96450cf93527b3
-      internalID: -1729555874
+      spriteID: 994bfb1601e57c843afe9d86c34a40d4
+      internalID: 1214554614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_14
+      name: Outline_14
       rect:
         serializedVersion: 2
         x: 1834
@@ -470,14 +470,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6e443e38312bdd479039dd059b7158b
-      internalID: -1515782824
+      spriteID: c5ae6432d34734c40927aede61b4dba5
+      internalID: -282530177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_15
+      name: Outline_15
       rect:
         serializedVersion: 2
         x: 1965
@@ -491,14 +491,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58a14f52702815a44beaa0cb0bc53da7
-      internalID: 1913036098
+      spriteID: b5568910bd27aeb4b98818b2e6aa4ce3
+      internalID: -1817392819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_16
+      name: Outline_16
       rect:
         serializedVersion: 2
         x: 2096
@@ -512,14 +512,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa4858f06deb4554ebb8faadd9ba1897
-      internalID: -1216486690
+      spriteID: 3dbb526a5612009479e1652241836df6
+      internalID: -729497331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_17
+      name: Outline_17
       rect:
         serializedVersion: 2
         x: 2227
@@ -533,14 +533,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea071d37d8e86074f82ad0ea933b702b
-      internalID: -197353879
+      spriteID: 96b9f38d734c1504b8f1850df4340370
+      internalID: -707102990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_18
+      name: Outline_18
       rect:
         serializedVersion: 2
         x: 2358
@@ -554,14 +554,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4fa5d3b855ab5c4cbdc2d9428898183
-      internalID: 1928132884
+      spriteID: 0cc8ebcc55a96d4449c368a1e7c9123b
+      internalID: 1826029631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_19
+      name: Outline_19
       rect:
         serializedVersion: 2
         x: 2489
@@ -575,14 +575,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27b91321d0f87a7439189762e48c5f76
-      internalID: -781781722
+      spriteID: affb4fe4bc3f85f4b8a723b6ce495c00
+      internalID: -1129528902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_20
+      name: Outline_20
       rect:
         serializedVersion: 2
         x: 2620
@@ -596,14 +596,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 062d94f55db27364db13720871d97c48
-      internalID: 1143086603
+      spriteID: 1fc4d1162a242d346a8e777c26d4221f
+      internalID: -1137060141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_21
+      name: Outline_21
       rect:
         serializedVersion: 2
         x: 2751
@@ -617,14 +617,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc004c33f9a9e9429f56af1044035e6
-      internalID: 1998182230
+      spriteID: ae180849a66108540a614c2f55e6e6a4
+      internalID: 1967549181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_22
+      name: Outline_22
       rect:
         serializedVersion: 2
         x: 2882
@@ -638,14 +638,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec7e450c7dd851e41b41935ad6255339
-      internalID: 119449857
+      spriteID: 9fe2b9d1a8acf8e40b7bea621283a5a4
+      internalID: -1557789418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_23
+      name: Outline_23
       rect:
         serializedVersion: 2
         x: 3013
@@ -659,14 +659,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f700652878bf7c7429971f239ec77e94
-      internalID: 963228951
+      spriteID: a073fd3ffa72d524b8ffe007bdc40e6f
+      internalID: -837410943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_24
+      name: Outline_24
       rect:
         serializedVersion: 2
         x: 3144
@@ -680,14 +680,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d33e5340f61782642b4cc8e45d2dd36b
-      internalID: 954003337
+      spriteID: 589635a699e249b4baea82317cd28984
+      internalID: 330803312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_25
+      name: Outline_25
       rect:
         serializedVersion: 2
         x: 3275
@@ -701,14 +701,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8c0df68d0522e146951421447f4c6bd
-      internalID: 698090414
+      spriteID: 101d814c58a54874589419075476da55
+      internalID: 1998865356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_26
+      name: Outline_26
       rect:
         serializedVersion: 2
         x: 3406
@@ -722,14 +722,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc194fd331603604da53369f23ccca5b
-      internalID: -1714728092
+      spriteID: d0ec0e9ed0e08b148b822eab0d4252d2
+      internalID: 1094003372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_27
+      name: Outline_27
       rect:
         serializedVersion: 2
         x: 3537
@@ -743,14 +743,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 619bae7513c4794438794ddde19486e1
-      internalID: 1382473214
+      spriteID: 94b5ecef56176584c89adb13fa4df244
+      internalID: 1125016899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_28
+      name: Outline_28
       rect:
         serializedVersion: 2
         x: 3668
@@ -764,14 +764,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b916cd0ae2c02d4e9d978214d6d182a
-      internalID: -587050446
+      spriteID: 909b6aa058ed63a4eaa087e72a1e39bf
+      internalID: -213527516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_29
+      name: Outline_29
       rect:
         serializedVersion: 2
         x: 3799
@@ -785,14 +785,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c3fc42285b1d0a4b8a0df8d66bcf4cd
-      internalID: 2122645556
+      spriteID: b8ef4103f25bc9243ad2b52837d19e68
+      internalID: -1596118700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_30
+      name: Outline_30
       rect:
         serializedVersion: 2
         x: 3930
@@ -806,14 +806,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4404a02a3965dd0419fc6f1b0842147d
-      internalID: 2043412770
+      spriteID: 8715011be0a4d3846bc0618868a7a719
+      internalID: 66376974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_31
+      name: Outline_31
       rect:
         serializedVersion: 2
         x: 4061
@@ -827,14 +827,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86e1cecb07e564b4ea42575550a288a8
-      internalID: -530603013
+      spriteID: b057686cfe1a22f4dbc3732b19aad950
+      internalID: 1504769576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_32
+      name: Outline_32
       rect:
         serializedVersion: 2
         x: 4192
@@ -848,14 +848,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69392cde3d61bda4cbc3642eb96e930a
-      internalID: 630521034
+      spriteID: e46d2ec7c2e881f428e4bbb08d019af3
+      internalID: -864484472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_33
+      name: Outline_33
       rect:
         serializedVersion: 2
         x: 4323
@@ -869,14 +869,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06c73728783289841b7d16ca37bca5bb
-      internalID: 1197598705
+      spriteID: fffc9ed1d6f527d429db1e6e02c61ae9
+      internalID: -460263132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_34
+      name: Outline_34
       rect:
         serializedVersion: 2
         x: 4454
@@ -890,14 +890,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4752106b090df1344b2576974702a6d4
-      internalID: -778744476
+      spriteID: 640f751af4dffa046b5b913b7bfec188
+      internalID: 1049731464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_35
+      name: Outline_35
       rect:
         serializedVersion: 2
         x: 4585
@@ -911,14 +911,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22d2722fdee13ce46ba159e07e97ca59
-      internalID: 385401566
+      spriteID: 465d50ff63ea57247b21e73d99de5ada
+      internalID: -1420169808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_36
+      name: Outline_36
       rect:
         serializedVersion: 2
         x: 4716
@@ -932,14 +932,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be17e4518e9b63443bb0e5cb5ebe8ee1
-      internalID: 901571117
+      spriteID: 3d118b3c2139c6c4db69d0f01761ee4c
+      internalID: 1129326941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_37
+      name: Outline_37
       rect:
         serializedVersion: 2
         x: 4847
@@ -953,14 +953,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a023abf32f898943afd0c24021211ae
-      internalID: -1523214572
+      spriteID: 3a43b5808a83a8c439998a0b1c305107
+      internalID: -1437439439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_38
+      name: Outline_38
       rect:
         serializedVersion: 2
         x: 4978
@@ -974,14 +974,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4e545532228eda4fad45d4681383263
-      internalID: -615497189
+      spriteID: 9b10a39ff747f7349b019115f4efc7b2
+      internalID: 1040727200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_39
+      name: Outline_39
       rect:
         serializedVersion: 2
         x: 5109
@@ -995,14 +995,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 882a5e213dd0983488fdb9017a585e82
-      internalID: -1673965652
+      spriteID: e9e4e911871c9764a85f2078cd347637
+      internalID: -1348174304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_40
+      name: Outline_40
       rect:
         serializedVersion: 2
         x: 5240
@@ -1016,14 +1016,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05b467dfccf15f440a4fdbe533295c61
-      internalID: -663883729
+      spriteID: cc8e92b08dbc766438225606fe1ca331
+      internalID: -1689509980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_41
+      name: Outline_41
       rect:
         serializedVersion: 2
         x: 5371
@@ -1037,14 +1037,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ced94660ba552a445b8869f88f878a3d
-      internalID: 915790398
+      spriteID: a32e0ea03dff2c3429bd4079d6c59582
+      internalID: -1799024546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_42
+      name: Outline_42
       rect:
         serializedVersion: 2
         x: 5502
@@ -1058,14 +1058,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2da2a086a1257784e8c16a9604115027
-      internalID: 829025574
+      spriteID: 8d062d077f3587744bea7ba1ccf78aba
+      internalID: 373373639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_43
+      name: Outline_43
       rect:
         serializedVersion: 2
         x: 5633
@@ -1079,14 +1079,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38e8d5fa3c6ebf1489c638db6360b9fb
-      internalID: 542131370
+      spriteID: 5532e34326c09544e812df8286c751d0
+      internalID: -511820627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_44
+      name: Outline_44
       rect:
         serializedVersion: 2
         x: 5764
@@ -1100,14 +1100,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eceeb507f2c188f4f8114b7ba2d33911
-      internalID: 272339240
+      spriteID: 6cff4e77751126b429d776450d704ba0
+      internalID: -1943013893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_45
+      name: Outline_45
       rect:
         serializedVersion: 2
         x: 5895
@@ -1121,14 +1121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b71335e1c9e72b45b34f03e9165d2d4
-      internalID: 278713501
+      spriteID: fce7a43c646d3a44bb45dd99ea22a930
+      internalID: -940912932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_46
+      name: Outline_46
       rect:
         serializedVersion: 2
         x: 6026
@@ -1142,14 +1142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0f150bc890d60f4197ee15e7f3896c4
-      internalID: -889155732
+      spriteID: 57542fbc0a9eae4498bc38089f4b9eb9
+      internalID: -11917955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_47
+      name: Outline_47
       rect:
         serializedVersion: 2
         x: 6157
@@ -1163,14 +1163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0b15cdd3a4157149b3d72480ffe2421
-      internalID: -1030208654
+      spriteID: 76435509ffafe9641bf8eb10da891d66
+      internalID: -2106792404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clown_48
+      name: Outline_48
       rect:
         serializedVersion: 2
         x: 6288
@@ -1184,8 +1184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ba096445c7cbb4cb9d7889ff7dd27e
-      internalID: 1354397930
+      spriteID: d7437d76b3bd16e4da09f601fdf38706
+      internalID: -1369117004
       vertices: []
       indices: 
       edges: []
@@ -1201,55 +1201,55 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Clown_0: -1233969989
-      Clown_1: -599226132
-      Clown_10: 1639494367
-      Clown_11: 1760904998
-      Clown_12: 1748378719
-      Clown_13: -1729555874
-      Clown_14: -1515782824
-      Clown_15: 1913036098
-      Clown_16: -1216486690
-      Clown_17: -197353879
-      Clown_18: 1928132884
-      Clown_19: -781781722
-      Clown_2: 173437646
-      Clown_20: 1143086603
-      Clown_21: 1998182230
-      Clown_22: 119449857
-      Clown_23: 963228951
-      Clown_24: 954003337
-      Clown_25: 698090414
-      Clown_26: -1714728092
-      Clown_27: 1382473214
-      Clown_28: -587050446
-      Clown_29: 2122645556
-      Clown_3: -343866158
-      Clown_30: 2043412770
-      Clown_31: -530603013
-      Clown_32: 630521034
-      Clown_33: 1197598705
-      Clown_34: -778744476
-      Clown_35: 385401566
-      Clown_36: 901571117
-      Clown_37: -1523214572
-      Clown_38: -615497189
-      Clown_39: -1673965652
-      Clown_4: -720881287
-      Clown_40: -663883729
-      Clown_41: 915790398
-      Clown_42: 829025574
-      Clown_43: 542131370
-      Clown_44: 272339240
-      Clown_45: 278713501
-      Clown_46: -889155732
-      Clown_47: -1030208654
-      Clown_48: 1354397930
-      Clown_5: -252023277
-      Clown_6: 1513985404
-      Clown_7: -1186592222
-      Clown_8: -584153114
-      Clown_9: -1522213922
+      Outline_0: 1731675918
+      Outline_1: 185897463
+      Outline_10: 623836233
+      Outline_11: 1409290282
+      Outline_12: -930310067
+      Outline_13: 1214554614
+      Outline_14: -282530177
+      Outline_15: -1817392819
+      Outline_16: -729497331
+      Outline_17: -707102990
+      Outline_18: 1826029631
+      Outline_19: -1129528902
+      Outline_2: -1874822517
+      Outline_20: -1137060141
+      Outline_21: 1967549181
+      Outline_22: -1557789418
+      Outline_23: -837410943
+      Outline_24: 330803312
+      Outline_25: 1998865356
+      Outline_26: 1094003372
+      Outline_27: 1125016899
+      Outline_28: -213527516
+      Outline_29: -1596118700
+      Outline_3: -634517843
+      Outline_30: 66376974
+      Outline_31: 1504769576
+      Outline_32: -864484472
+      Outline_33: -460263132
+      Outline_34: 1049731464
+      Outline_35: -1420169808
+      Outline_36: 1129326941
+      Outline_37: -1437439439
+      Outline_38: 1040727200
+      Outline_39: -1348174304
+      Outline_4: -1670114276
+      Outline_40: -1689509980
+      Outline_41: -1799024546
+      Outline_42: 373373639
+      Outline_43: -511820627
+      Outline_44: -1943013893
+      Outline_45: -940912932
+      Outline_46: -11917955
+      Outline_47: -2106792404
+      Outline_48: -1369117004
+      Outline_5: -658655734
+      Outline_6: -939128928
+      Outline_7: 232580144
+      Outline_8: -456398725
+      Outline_9: 357716343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

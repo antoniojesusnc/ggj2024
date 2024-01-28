@@ -7,6 +7,8 @@ public class GameUI : Singleton<GameUI>
     [SerializeField] private UIBeginMessage _uiBegin;
     [SerializeField] private UIEndLevel _uiEndLevel;
     [SerializeField] private UILevelTimer _uiLevelTimer;
+    
+    [SerializeField] private GameObject _readyButton;
 
     [field:SerializeField]
     public Transform PlayerContainer { get; private set; }
@@ -31,6 +33,13 @@ public class GameUI : Singleton<GameUI>
         _bellySlap.OnLevelBegin += OnLevelBegin;
         _bellySlap.OnLevelFinish += OnFinishGameplay;
         _uiBegin.Finished += OnFinishedCountdown;
+
+        _bellySlap.OnPlayerConnected += OnPlayerConnected;
+    }
+
+    private void OnPlayerConnected()
+    {
+        _readyButton.gameObject.SetActive(true);
     }
 
     private void UnsubscribeEvents()
@@ -43,6 +52,7 @@ public class GameUI : Singleton<GameUI>
     public void Begin()
     {
         _uiBegin.Init();
+        _bellySlap.BeginCountDown();
     }
     
     private void OnLevelBegin()
