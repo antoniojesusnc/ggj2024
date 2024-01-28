@@ -11,6 +11,7 @@ public class KingController : Singleton<KingController>
         ready,
         smallsmile,
         smile,
+        saveReady
     }
 
     private Animator _animator;
@@ -27,7 +28,7 @@ public class KingController : Singleton<KingController>
 
     private void OnBeginCountDown()
     {
-        SetAnimation(Animations.idle);
+        SetAnimation(Animations.saveReady);
     }
 
     private void OnPlayerConnected()

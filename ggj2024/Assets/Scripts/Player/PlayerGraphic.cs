@@ -66,7 +66,7 @@ namespace Player
 
         private void SetInitialAnimation()
         {
-            SetAnimator(PlayerAnimation.idle);
+            SetAnimator(PlayerAnimation.idledressed);
         }
 
         public void SetAnimator(PlayerAnimation animation)
