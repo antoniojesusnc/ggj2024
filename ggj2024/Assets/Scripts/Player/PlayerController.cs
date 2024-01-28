@@ -32,6 +32,21 @@ namespace Player
             InputCapturing.StartCapturing();
         }
 
+        public void PlayerIndexDEbug()
+        {
+            Debug.Log($"test: {PlayerIndex}");
+        }
+
+        public void PrimaryPressed()
+        {
+            InputCapturing.PrimaryInputPressed();
+        }
+
+        public void SecondaryPressed()
+        {
+            InputCapturing.SecondaryInputPressed();
+        }
+
         private void SubscribeEvents()
         {
             GameUI.Instance.FinishedCountdown += OnFinishedCountdown;

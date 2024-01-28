@@ -11,5 +11,8 @@
 
         void StartCapturing();
         void StopCapturing();
+
+        void PrimaryInputPressed();
+        void SecondaryInputPressed();
     }
 }

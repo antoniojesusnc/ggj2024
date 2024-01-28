@@ -19,25 +19,38 @@ namespace Player.PlayerInput
         public virtual void StartCapturing()
         {
             _inputs.Enable();
-            _inputs.ClownP1.AlternatingPrimary.performed += PrimaryInputPressed;
-            _inputs.ClownP1.AlternatingSecondary.performed += SecondaryInputPressed;
+            //_inputs.ClownP1.AlternatingPrimary.performed += PrimaryInputPressed;
+            //_inputs.ClownP1.AlternatingSecondary.performed += SecondaryInputPressed;
         }
 
         public virtual void StopCapturing()
         {
-            _inputs.ClownP1.AlternatingPrimary.performed -= PrimaryInputPressed;
-            _inputs.ClownP1.AlternatingSecondary.performed -= SecondaryInputPressed;
+            //_inputs.ClownP1.AlternatingPrimary.performed -= PrimaryInputPressed;
+            //_inputs.ClownP1.AlternatingSecondary.performed -= SecondaryInputPressed;
         }
 
-        private void PrimaryInputPressed(InputAction.CallbackContext obj)
+        public void PrimaryInputPressed(InputAction.CallbackContext obj)
         {
-            if (obj.control.device.deviceId == _deviceId)
+            //if (obj.control.device.deviceId == _deviceId)
                 OnInputPressed(IInputCapturing.InputTypes.Primary);
         }
-
-        private void SecondaryInputPressed(InputAction.CallbackContext obj)
+        
+        public void PrimaryInputPressed()
         {
-            if (obj.control.device.deviceId == _deviceId)
+            //if (obj.control.device.deviceId == _deviceId)
+            OnInputPressed(IInputCapturing.InputTypes.Primary);
+        }
+        
+        
+
+        public void SecondaryInputPressed(InputAction.CallbackContext obj)
+        {
+            //if (obj.control.device.deviceId == _deviceId)
+                OnInputPressed(IInputCapturing.InputTypes.Secondary);
+        }      
+        public void SecondaryInputPressed()
+        {
+            //if (obj.control.device.deviceId == _deviceId)
                 OnInputPressed(IInputCapturing.InputTypes.Secondary);
         }
 
