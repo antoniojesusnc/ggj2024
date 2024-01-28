@@ -69,7 +69,7 @@ public class AudioManager : Singleton<AudioManager>
         return false;
     }
 
-    public void DestroyAudioSourceAfter(AudioTypes audioTypes, float delayToDestroy)
+    public void DestroyAudioSourceAfter(AudioTypes audioTypes, float delayToDestroy = 0.5f)
     {
         var audioSourcesInfo = _audioSourcesInfo.Find(audioSource => audioSource.AudioTypes == audioTypes);
         if (audioSourcesInfo != null)

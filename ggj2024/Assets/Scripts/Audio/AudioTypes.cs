@@ -22,6 +22,7 @@ public enum AudioTypes
     musica_main_menu_divertida_y_tranquila,
     musica_in_game,
     musica_go,
+    musica_character,
 
     Size
 }

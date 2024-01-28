@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _laughRanges:
   - <MinValue>k__BackingField: 0
-    <MaxValue>k__BackingField: 100
+    <MaxValue>k__BackingField: 80
     <Animation>k__BackingField: 4
-  - <MinValue>k__BackingField: 100
-    <MaxValue>k__BackingField: 150
+  - <MinValue>k__BackingField: 80
+    <MaxValue>k__BackingField: 110
     <Animation>k__BackingField: 2
-  - <MinValue>k__BackingField: 150
-    <MaxValue>k__BackingField: 200
+  - <MinValue>k__BackingField: 110
+    <MaxValue>k__BackingField: 1e+9
     <Animation>k__BackingField: 0

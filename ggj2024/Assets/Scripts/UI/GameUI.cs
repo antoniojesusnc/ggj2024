@@ -26,6 +26,8 @@ public class GameUI : Singleton<GameUI>
         _bellySlap = BellySlap.Instance as BellySlap;
 
         SubscribeEvents();
+
+        AudioManager.Instance.PlaySound(AudioTypes.musica_character);
     }
 
     private void SubscribeEvents()
@@ -51,6 +53,7 @@ public class GameUI : Singleton<GameUI>
 
     public void Begin()
     {
+        AudioManager.Instance.DestroyAudioSourceAfter(AudioTypes.musica_character);
         _uiBegin.Init();
         _bellySlap.BeginCountDown();
     }
