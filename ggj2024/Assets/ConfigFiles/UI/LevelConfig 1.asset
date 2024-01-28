@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5658e24c2ef9413478ee2419f8d13fec, type: 3}
+  m_Name: LevelConfig 1
+  m_EditorClassIdentifier: 
+  _laughRanges:
+  - <MinValue>k__BackingField: 0
+    <MaxValue>k__BackingField: 100
+    <Animation>k__BackingField: 5
+  - <MinValue>k__BackingField: 100
+    <MaxValue>k__BackingField: 150
+    <Animation>k__BackingField: 4
+  - <MinValue>k__BackingField: 150
+    <MaxValue>k__BackingField: 200
+    <Animation>k__BackingField: 2
+  - <MinValue>k__BackingField: 250
+    <MaxValue>k__BackingField: 300
+    <Animation>k__BackingField: 0

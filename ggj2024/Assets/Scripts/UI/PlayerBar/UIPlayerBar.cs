@@ -2,6 +2,7 @@ using System;
 using System.Timers;
 using DG.Tweening;
 using Player.PlayerInput;
+using Trials;
 using Trials.Data;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,12 +16,28 @@ public class UIPlayerBar : MonoBehaviour
     private float _factor;
 
     private float _fillValue;
+    private BellySlap _bellySlap;
+    private bool _deductValues;
+
+    public PlayerBellySlapData PlayerBellySlapData { get; private set; }
     
     public void Init(PlayerBellySlapData playersController, float factor)
     {
+        PlayerBellySlapData = playersController;
+        
         _factor = factor;
         playersController.NewSlapCount += NewSlapCount;
         _image.fillAmount = 0;
+
+        _bellySlap = (BellySlap.Instance as BellySlap);
+        _bellySlap.OnLevelFinish += OnLevelFinish;
+
+        _deductValues = true;
+    }
+
+    private void OnLevelFinish()
+    {
+        _deductValues = false;
     }
 
     private void NewSlapCount(IInputCapturing.InputTypes input)
@@ -46,6 +63,11 @@ public class UIPlayerBar : MonoBehaviour
 
     void Update()
     {
+        if (!_deductValues)
+        {
+            return;
+        }
+        
         _image.fillAmount -= _config.DownSpeed * Time.deltaTime;
         _image.fillAmount += _fillValue;
 

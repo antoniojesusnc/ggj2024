@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Player;
 using TMPro;
 using Trials;
 using Trials.Data;
@@ -13,12 +14,11 @@ public class UIEndLevel : MonoBehaviour
     
     [Header("Items")]
     [SerializeField] private TextMeshProUGUI _finalText;
+    
     [SerializeField] private TextMeshProUGUI _winnerText;
     [SerializeField] private GameObject _continueButton;
     
-    [SerializeField] private Transform _parent;
-
-    [SerializeField] private UIPlayerBar uiPlayerBarPrefab;
+    [SerializeField] private UIPlayerBarManager _bars;
     
     private List<UIPlayerBar> _endLevelPlayerBars = new List<UIPlayerBar>();
     private List<PlayerBellySlapData> _players;
@@ -40,8 +40,6 @@ public class UIEndLevel : MonoBehaviour
         AssingSpawnBars();
 
         ShowMessage();
-
-        BeginSpawnsBars();
     }
 
     private void ShowMessage()
@@ -73,12 +71,13 @@ public class UIEndLevel : MonoBehaviour
 
     private void MakeLaugh(int index)
     {
-        
+        KingController.Instance.Laugh(_endLevelPlayerBars[index].PlayerBellySlapData.SlapCount);
         DOVirtual.DelayedCall(_config.TimeToLaugh, () => ContinueWithBars(index));
     }
 
     private void ContinueWithBars(int index)
     {
+        KingController.Instance.SetAnimation(KingController.Animations.idle);
         if (index < _endLevelPlayerBars.Count)
         {
             DoSpawnBar(index + 1);
@@ -99,8 +98,7 @@ public class UIEndLevel : MonoBehaviour
 
     private UIPlayerBar GetPlayerBar(PlayerBellySlapData player)
     {
-        // TODO
-        return null;
+        return _bars.GetBarFor(player);
     }
 
     private int GetMaxValue()
@@ -115,8 +113,6 @@ public class UIEndLevel : MonoBehaviour
         }
         return max;
     }
-
-    
     
     private void EndBarAnimation()
     {
@@ -136,7 +132,17 @@ public class UIEndLevel : MonoBehaviour
 
     private void MakeWinLoseAnimationsForPlayers()
     {
-        
+        _players.Sort(SortBySlap);
+        _players[0].PlayerController.GetComponentInChildren<PlayerGraphic>().SetAnimator(PlayerGraphic.PlayerAnimation.victoria);
+        for (int i = 1; i < _players.Count; i++)
+        {
+            _players[i].PlayerController.GetComponentInChildren<PlayerGraphic>().SetAnimator(PlayerGraphic.PlayerAnimation.loose);
+        }
+    }
+
+    private int SortBySlap(PlayerBellySlapData x, PlayerBellySlapData y)
+    {
+        return x.SlapCount.CompareTo(y.SlapCount);
     }
 
     public void OnClickInContinue()

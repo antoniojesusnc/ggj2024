@@ -53,6 +53,7 @@ namespace Trials
         
         private void LevelFinish()
         {
+            _isPlaying = false;
             OnLevelFinish?.Invoke();
         }
 

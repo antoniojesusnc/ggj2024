@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b989739a47c50a4438eb374cc5596ec4, type: 3}
   m_Name: UIPlayerBarConfig
   m_EditorClassIdentifier: 
-  <BarOffset>k__BackingField: {x: 5, y: 0, z: 0}
+  <BarOffset>k__BackingField: {x: 40, y: 0, z: 0}
   <FillSpeed>k__BackingField: 3
   <Ease>k__BackingField: 0
   <DownSpeed>k__BackingField: 0.1
-  <IncreasePerInput>k__BackingField: 3
+  <IncreasePerInput>k__BackingField: 0.02
   <MaxPitch>k__BackingField: 0

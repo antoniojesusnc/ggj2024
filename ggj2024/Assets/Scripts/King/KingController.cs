@@ -1,7 +1,7 @@
 using Trials;
 using UnityEngine;
 
-public class KingController : MonoBehaviour
+public class KingController : Singleton<KingController>
 {
     public enum Animations
     {
@@ -14,12 +14,20 @@ public class KingController : MonoBehaviour
     }
 
     private Animator _animator;
-    
+    private BellySlap _bellySlap;
+
     public void Start()
     {
         _animator = GetComponent<Animator>();
 
-        (BellySlap.Instance as BellySlap).OnPlayerConnected += OnPlayerConnected;
+        _bellySlap = (BellySlap.Instance as BellySlap);
+        _bellySlap.OnPlayerConnected += OnPlayerConnected;
+        _bellySlap.OnBeginCountdown += OnBeginCountDown;
+    }
+
+    private void OnBeginCountDown()
+    {
+        SetAnimation(Animations.idle);
     }
 
     private void OnPlayerConnected()
@@ -30,5 +38,10 @@ public class KingController : MonoBehaviour
     public void SetAnimation(Animations animation)
     {
         _animator.Play(animation.ToString());
+    }
+
+    public void Laugh(int slapCount)
+    {
+        
     }
 }
