@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 8091446357441897857}
   - component: {fileID: 112204427257363729}
   - component: {fileID: 2320589890045792863}
+  - component: {fileID: 7362517331443244378}
   m_Layer: 0
   m_Name: Cloud 3
   m_TagString: Untagged
@@ -453,6 +454,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7362517331443244378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093137894303944964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38120835eb345714fb8e819ac6f35840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 20
+  _offset: 16
+  _ease: 4
 --- !u!1 &2357138525296311040
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +594,7 @@ GameObject:
   - component: {fileID: 5631819463820798166}
   - component: {fileID: 3491403598107240418}
   - component: {fileID: 1151704961033767294}
+  - component: {fileID: 5035509932561822137}
   m_Layer: 0
   m_Name: Cloud 3
   m_TagString: Untagged
@@ -642,6 +659,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5035509932561822137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568440572541942811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38120835eb345714fb8e819ac6f35840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 20
+  _offset: 27
+  _ease: 4
 --- !u!1 &2823221984718366433
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +685,7 @@ GameObject:
   - component: {fileID: 7571303738841727879}
   - component: {fileID: 508094830150955680}
   - component: {fileID: 3123232413125733891}
+  - component: {fileID: 6273556580131361946}
   m_Layer: 0
   m_Name: Cloud 1
   m_TagString: Untagged
@@ -717,6 +750,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6273556580131361946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2823221984718366433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38120835eb345714fb8e819ac6f35840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 5
+  _offset: 4
+  _ease: 4
 --- !u!1 &2827009070366444181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1311,7 @@ GameObject:
   - component: {fileID: 2685295047069538415}
   - component: {fileID: 341171209937791257}
   - component: {fileID: 7062674044853138896}
+  - component: {fileID: 7709115812532027831}
   m_Layer: 0
   m_Name: Cloud 2
   m_TagString: Untagged
@@ -1327,6 +1376,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7709115812532027831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575346409359459835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38120835eb345714fb8e819ac6f35840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 4
+  _offset: 4
+  _ease: 4
 --- !u!1 &5634708697716529545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,6 +1477,7 @@ GameObject:
   - component: {fileID: 205927131895648894}
   - component: {fileID: 609703329651589134}
   - component: {fileID: 8109024620586955808}
+  - component: {fileID: 3532795504124846437}
   m_Layer: 0
   m_Name: Cloud 4
   m_TagString: Untagged
@@ -1477,6 +1542,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3532795504124846437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696405982043623931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38120835eb345714fb8e819ac6f35840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 20
+  _offset: 30
+  _ease: 4
 --- !u!1 &5905120963840731482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1718,7 @@ GameObject:
   - component: {fileID: 1131684317999104567}
   - component: {fileID: 7299299161287240092}
   - component: {fileID: 6533958824814665654}
+  - component: {fileID: 1985976506116595982}
   m_Layer: 0
   m_Name: Cloud 1
   m_TagString: Untagged
@@ -1702,6 +1783,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1985976506116595982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166417708947882293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38120835eb345714fb8e819ac6f35840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 5
+  _offset: 2
+  _ease: 4
 --- !u!1 &7324064567482226274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1921,7 @@ GameObject:
   - component: {fileID: 5399984558837649011}
   - component: {fileID: 5838251719995074734}
   - component: {fileID: 678587087597726548}
+  - component: {fileID: 293594524835981572}
   m_Layer: 0
   m_Name: Cloud 2
   m_TagString: Untagged
@@ -1889,6 +1986,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &293594524835981572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7554473965568726147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38120835eb345714fb8e819ac6f35840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 10
+  _offset: 1
+  _ease: 4
 --- !u!1 &7564462173663650469
 GameObject:
   m_ObjectHideFlags: 0
