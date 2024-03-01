@@ -15,7 +15,8 @@ public class Floating : MonoBehaviour
 
     private void Anim()
     {
-        _tween = GetComponent<RectTransform>().DOAnchorPosY(-_offset, _duration).SetEase(_ease).SetLoops(-1, LoopType.Yoyo);
+        // 6 is the pixel size factor. This should be moved to a config value
+        _tween = GetComponent<RectTransform>().DOAnchorPosY(-_offset * 6, _duration).SetEase(_ease).SetLoops(-1, LoopType.Yoyo);
     }
 
     private void OnDestroy()
